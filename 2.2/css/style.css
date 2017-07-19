@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Quicksand, sans-serif;
+    font-family: Quicksand;
     margin: 0;
     background: lightblue;
 }
@@ -20,7 +20,11 @@ ul {
     margin: 0;
 }
 
-
+li {
+    height: 50px;
+    line-height: 50px;
+    width: 200px;
+}
 
 nav {
     width: 100%;
@@ -34,9 +38,6 @@ li:hover {
 
 nav li {
      display: inline-block;
-     height: 50px;
-     line-height: 50px;
-     width: 200px;
 }
 
 nav ul {
@@ -45,15 +46,12 @@ nav ul {
 }
 
 nav ul ul li {
-     display: block; 
+     display: block;
+     /* float: left; */
 }
 
 nav ul ul {
     display: none;
-    position: absolute;
-}
-
-nav li li {
     position: absolute;
 }
 
