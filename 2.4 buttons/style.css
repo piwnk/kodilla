@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+   background-color: grey;
+}
+
+[class^="btn-"] {
+   display: inline-block;
+   margin: 4px 2px;
+   padding: 15px 30px;
+   min-width: 160px;
+   font-family: "Quicksand", sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: .4s;
+   /* background-color: inherit; */
+}
+
+ [class^="btn-"]:hover {
+   background-position: 0 100%;
+   color: white;
+} 
+
+.btn-purple {
+   background-position: 100% 0;
+   background-size: 300%;
+   background-color: inherit;
+   background-image: linear-gradient(90deg, #8e44ad 50%, transparent 50%);
+   border-color: #8e44ad;
+   color: #8e44ad;
+}
+
+.btn-yellow {
+   background-position: 100% 0;
+   background-size: 300%;
+   background-color: inherit;
+   border-collapse: #f1c40f;
+   color: #f1c40f;
+   background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%)
+}
+
+.btn-blue {
+   background-position: 100% 0;
+   background-size: 300%;
+   background-color: inherit;
+   border-color: #3498db;
+   color: #3498db;
+   background-image: linear-gradient(135deg, #3498db 50%, transparent 50%);
+}

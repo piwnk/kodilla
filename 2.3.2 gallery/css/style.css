@@ -1,0 +1,14 @@
+* {
+   box-sizing: border-box;
+}
+
+.gallery img {
+   float: left;
+   width: 25%;
+}
+
+.gallery img:hover {
+   cursor: pointer;
+   opacity: .8;
+   transition: .3s;
+}
