@@ -73,6 +73,12 @@ i.fa {
 
 .gold,
 .gold:before,
-.gold i.fa {
+.gold i.fa,
+.orange,
+.orange:before,
+.orange i.fa,
+.blue,
+.blue:before,
+.blue i.fa {
    transition: ease-in-out .3s;
 }

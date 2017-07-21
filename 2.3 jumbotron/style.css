@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+* {
+   box-sizing: border-box;
+   margin: 0;
+}
+
 /* JUMBO */
 .jumbotron {
     width: 100%;
@@ -37,9 +42,7 @@
 }
 
 /* GALLERY */
-* {
-   box-sizing: border-box;
-}
+
 
 .gallery img {
    float: left;
