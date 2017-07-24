@@ -9,8 +9,7 @@ body {
 }
 
 .container {
-   max-width: 1200px;
-   margin: 0 auto;
+    max-width: 1200px;
 }
 
 nav:before,
@@ -48,7 +47,8 @@ header>nav>ul>li>a {
 }
 
 header>nav>ul>li>a:hover {
-   color: lightgreen;
+   color: #4099FF;
+   transition: ease-in-out .5s;
 }
 
 header>nav>ul>li:hover {
@@ -77,74 +77,143 @@ header>nav>img {
    background-repeat: repeat-x;
    overflow: hidden;
    width: 100%;
-   height: calc(100vh - 50px - 110px);
+   height: calc(100vh - 50px - 200px);
    /* height: 95vh; */
 }
 
 .slogan {
    background-color: rgba(0, 0, 0, 0.5);
    float: right;
-   margin-top: 30vh;
-   width: 50vw;
+   margin-top: 40vh;
+   width: 70vw;
    max-width: 800px;
    padding: 10px 50px;
+   transition: ease-out 0.5s;
 }
 
 .slogan:hover {
-   transition: ease-in-out .5s;
+   transition: ease-in .5s;
    background-color: rgba(0, 0, 0, 0.6)
 }
 
 .slogan>h1 {
    color: grey;
+   margin: auto 10px;
 }
 
-.slogan h1:nth-child(2) {
+.slogan h1:last-child {
    color: white;
 }
 
-.slogan h1:nth-child(2):hover {
-   color: lightgreen;
-    transition: .5s; 
+.slogan h1:last-child:hover {
+   color: #4099FF;
+   transition: .3s;
 }
 
 
 /* RSA */
 
-.rsa {
-   height: 150px;
+.rsa-row {
+   /* height: 150px; */
    background-color: white;
-    padding: 10px; 
+   padding: 10px;
 }
 
 .rsa-btn {
    width: 50px;
    height: 50px;
    border: 0;
-   background-color: #313234;
    color: white;
    border-radius: 20%;
-    /* margin: 30px 10px;  */
+   background-color: #313234;
+   /* margin: 30px 10px;  */
    cursor: pointer;
    font-size: 25px;
-   /* line-height: 75px; */
+   line-height: 50px;
 }
 
-.rsa-row:nth-child(2) button {
+.rsa-btn-central {
    background-color: #4099FF;
 }
 
 .rsa-btn:hover>i {
    transform: scale(1.1);
-   transition: .5s;
-   color: lightgreen;
+   /* transition: ease-in-out .5s; */
+   color: crimson;
 }
 
 .rsa-row h3 {
-   margin: 10px;
+   font-weight: bold;
+   margin: 5px;
 }
 
 .rsa-row p {
-   margin: 5px;
+   margin: 3px;
    font-size: 10px;
+}
+
+
+/* QUOTE */
+
+
+/* TOFIX */
+
+.quote {
+   margin: 100px;
+   text-align: center;
+}
+
+
+/* GALLERY */
+
+.gallery {
+   margin: 0 auto;
+   padding: 0;
+}
+
+.gallery .col-3 {
+   position: relative;
+}
+
+.gallery img {
+   width: 100%;
+}
+
+.gallery .shader {
+   
+}
+
+.gallery .col-3 {
+   background: black;
+}
+
+.gallery-btns {
+   display: none;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.gallery .col-3:hover {
+   opacity: 0.9;
+}
+
+.gallery .col-3:hover .gallery-btns {
+   display: block;
+}
+
+.gallery-btn {
+   margin: 0 10px;
+   border: 0;
+   border-radius: 10%;
+   height: 25px;
+   width: 30px;
+   margin: 10px 10px;
+   background-color: white;
+}
+
+.gallery-btn:hover {
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
 }

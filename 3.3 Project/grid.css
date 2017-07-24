@@ -7,8 +7,8 @@ row:after {
 
 [class*="col-"] {
    float: left;
-   min-height: 1px;
-   padding: 2px;
+    min-height: 1px; 
+   /* padding: 2px; */
    text-align: center;
 }
 
