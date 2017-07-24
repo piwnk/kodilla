@@ -9,10 +9,8 @@ body {
 }
 
 .container {
-   /* width: 100%; */
-   max-width: 12000px;
+   max-width: 1200px;
    margin: 0 auto;
-   /* border: 1px solid black; */
 }
 
 nav:before,
@@ -27,12 +25,8 @@ nav:after {
 
 header {
    background-color: #313234;
-    height: 50px; 
-   /* height: 5vh; */
-   /* width: 100%; */
-   /* position: fixed;  */
+   height: 50px;
 }
-
 
 header nav li {
    display: inline-block;
@@ -58,8 +52,7 @@ header>nav>ul>li>a:hover {
 }
 
 header>nav>ul>li:hover {
-   /* opacity: .8; */
-   transition: .3s;
+   transition: 1s;
    cursor: pointer;
    background-color: rgba(0, 0, 0, 0.8)
 }
@@ -69,31 +62,37 @@ header>nav>img {
    padding-left: 10px;
 }
 
+.logo {
+   height: 50px;
+   filter: invert(100%)
+}
+
 
 /* JUMBOTRON */
 
 .hero {
    background-image: url(https://lh3.googleusercontent.com/rfG_XeGWq8fCAMdOQWWT_Enbc12aM2yLulv35oAFDuZt2DrNf4KCtmndWArrS1jxsqnF7cdYoZFG2H8nrQtOEGX96dZVjSfUO1NnISIQzhxOnb-q87bGTlHWW4GoRyohfCGOw_keuLHEB74YwuUN-5xZiwWfSIqGCV-9BgpWO5uXqzGQ5vHK34HnIfOX8cc0ESAxqQIaweeTjaP0cMrw5uF_H9XGlwLgL_21LHVGbu35lUFMpe3FXeOhX2F39Yp5l6_mJfI-wNsByYtZXpNih_PDHsm-quHtN2x-t61Vd2qxwxWgYZSixKKR4EHJGhVsvOyKZx7SP6jpwM-h6AW58cGTNkWlsIMMpk6kOXl69Lo4uYfM4K725bQX_HK2zj-Or4HXriIXNUu4wlYvAOell3vkPtPgTwHtSekx-OSnfu--wfpJpbpLtGLs97fVrJ0THe5_0XTCsgd8NOEvVaNNnN34PHA_fEyxkJI1UAEDo552GlQFJF9UuEzu4lJedWLMHWpRHOhB_2kdqjjwadkYtN4afgSXz96Gk4Ctj7e0tvouWyNCSgLyCrn4cYvvYkAe8lE1H0fFTD70MLeQY2mqAdqSYITR448zmzx5XrahKxBmltqolX7x1_7q_A=w1600-h900-no);
    background-size: cover;
-   background-position: center;
+   background-position: center -20px;
+   background-repeat: repeat-x;
    overflow: hidden;
    width: 100%;
-   height: calc(100vh - 50px);
+   height: calc(100vh - 50px - 110px);
    /* height: 95vh; */
 }
 
 .slogan {
-   background-color: rgba(0, 0, 0, 0.8);
+   background-color: rgba(0, 0, 0, 0.5);
    float: right;
-   margin-top: 50vh;
+   margin-top: 30vh;
    width: 50vw;
    max-width: 800px;
    padding: 10px 50px;
 }
 
-slogan:hover {
-   transition: ease-in-out .3s;
-   background-color: rgba(0, 0, 0, 0.3)
+.slogan:hover {
+   transition: ease-in-out .5s;
+   background-color: rgba(0, 0, 0, 0.6)
 }
 
 .slogan>h1 {
@@ -104,6 +103,48 @@ slogan:hover {
    color: white;
 }
 
-.row {
-   padding: 10px 100px;
+.slogan h1:nth-child(2):hover {
+   color: lightgreen;
+    transition: .5s; 
+}
+
+
+/* RSA */
+
+.rsa {
+   height: 150px;
+   background-color: white;
+    padding: 10px; 
+}
+
+.rsa-btn {
+   width: 50px;
+   height: 50px;
+   border: 0;
+   background-color: #313234;
+   color: white;
+   border-radius: 20%;
+    /* margin: 30px 10px;  */
+   cursor: pointer;
+   font-size: 25px;
+   /* line-height: 75px; */
+}
+
+.rsa-row:nth-child(2) button {
+   background-color: #4099FF;
+}
+
+.rsa-btn:hover>i {
+   transform: scale(1.1);
+   transition: .5s;
+   color: lightgreen;
+}
+
+.rsa-row h3 {
+   margin: 10px;
+}
+
+.rsa-row p {
+   margin: 5px;
+   font-size: 10px;
 }
