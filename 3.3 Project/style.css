@@ -1,158 +1,183 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 * {
-   box-sizing: border-box;
-   font-family: "Quicksand", sans-serif;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
 }
 
 body {
-   margin: 0 auto;
+    /* max-width: 1200px;  */
+    margin: 0 auto;
 }
 
-/* WHY float: left on .container puts white line between header and jumbo */
-
 .container {
-   max-width: 1200px;
-   /* margin: 0 auto; */
-   width: 100%;
-   /* float: left; */
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+
+/* HOWTO Use it */
+
+.chessboard {
+    background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
 
 nav:before,
 nav:after {
-   content: "";
-   display: table;
-   clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 
 /* HEADER */
 
 header {
-   background-color: #313234;
-   height: 50px;
+    background-color: #313234;
+    height: 50px;
 }
 
 header nav li {
-   display: inline-block;
+    display: inline-block;
 }
 
 header>nav>ul {
-   margin: 0;
-   padding: 0;
-   list-style-type: none;
-   float: right;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
 }
 
 header>nav>ul>li>a {
-   line-height: 50px;
-   padding: 0 20px;
-   color: white;
-   text-decoration: none;
-   text-transform: uppercase;
+    line-height: 50px;
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 header>nav>ul>li>a:hover {
-   color: #4099FF;
-   transition: ease-in-out .5s;
+    color: #4099FF;
+    transition: ease-in-out .5s;
 }
 
 header>nav>ul>li:hover {
-   transition: 1s;
-   cursor: pointer;
-   background-color: rgba(0, 0, 0, 0.8)
+    transition: 1s;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8)
 }
 
 header>nav>img {
-   padding: 10px 0;
-   padding-left: 10px;
+    padding: 10px 0;
+    padding-left: 10px;
 }
 
 .logo {
-   height: 50px;
-   filter: invert(100%)
+    height: 50px;
+    filter: invert(100%)
 }
 
 
 /* JUMBOTRON */
 
 .hero {
-   background-image: url(https://lh3.googleusercontent.com/rfG_XeGWq8fCAMdOQWWT_Enbc12aM2yLulv35oAFDuZt2DrNf4KCtmndWArrS1jxsqnF7cdYoZFG2H8nrQtOEGX96dZVjSfUO1NnISIQzhxOnb-q87bGTlHWW4GoRyohfCGOw_keuLHEB74YwuUN-5xZiwWfSIqGCV-9BgpWO5uXqzGQ5vHK34HnIfOX8cc0ESAxqQIaweeTjaP0cMrw5uF_H9XGlwLgL_21LHVGbu35lUFMpe3FXeOhX2F39Yp5l6_mJfI-wNsByYtZXpNih_PDHsm-quHtN2x-t61Vd2qxwxWgYZSixKKR4EHJGhVsvOyKZx7SP6jpwM-h6AW58cGTNkWlsIMMpk6kOXl69Lo4uYfM4K725bQX_HK2zj-Or4HXriIXNUu4wlYvAOell3vkPtPgTwHtSekx-OSnfu--wfpJpbpLtGLs97fVrJ0THe5_0XTCsgd8NOEvVaNNnN34PHA_fEyxkJI1UAEDo552GlQFJF9UuEzu4lJedWLMHWpRHOhB_2kdqjjwadkYtN4afgSXz96Gk4Ctj7e0tvouWyNCSgLyCrn4cYvvYkAe8lE1H0fFTD70MLeQY2mqAdqSYITR448zmzx5XrahKxBmltqolX7x1_7q_A=w1600-h900-no);
-   background-size: cover;
-   background-position: center -20px;
-   background-repeat: repeat-x;
-   overflow: hidden;
-   width: 100%;
-   height: calc(100vh - 50px - 200px);
+    background-image: url(https://lh3.googleusercontent.com/rfG_XeGWq8fCAMdOQWWT_Enbc12aM2yLulv35oAFDuZt2DrNf4KCtmndWArrS1jxsqnF7cdYoZFG2H8nrQtOEGX96dZVjSfUO1NnISIQzhxOnb-q87bGTlHWW4GoRyohfCGOw_keuLHEB74YwuUN-5xZiwWfSIqGCV-9BgpWO5uXqzGQ5vHK34HnIfOX8cc0ESAxqQIaweeTjaP0cMrw5uF_H9XGlwLgL_21LHVGbu35lUFMpe3FXeOhX2F39Yp5l6_mJfI-wNsByYtZXpNih_PDHsm-quHtN2x-t61Vd2qxwxWgYZSixKKR4EHJGhVsvOyKZx7SP6jpwM-h6AW58cGTNkWlsIMMpk6kOXl69Lo4uYfM4K725bQX_HK2zj-Or4HXriIXNUu4wlYvAOell3vkPtPgTwHtSekx-OSnfu--wfpJpbpLtGLs97fVrJ0THe5_0XTCsgd8NOEvVaNNnN34PHA_fEyxkJI1UAEDo552GlQFJF9UuEzu4lJedWLMHWpRHOhB_2kdqjjwadkYtN4afgSXz96Gk4Ctj7e0tvouWyNCSgLyCrn4cYvvYkAe8lE1H0fFTD70MLeQY2mqAdqSYITR448zmzx5XrahKxBmltqolX7x1_7q_A=w1600-h900-no);
+    background-size: cover;
+    background-position: center -30px;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    width: 100%;
+    /* height: calc(100vh - 50px - 280px); */
+    height: 400px;
 }
 
 .slogan {
-   background-color: rgba(0, 0, 0, 0.5);
-   float: right;
-   margin-top: 30vh;
-   width: 60vw;
-   max-width: 800px;
-   padding: 10px 50px;
-   transition: ease-out 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: right;
+    margin-top: 250px;
+    width: 50vw;
+    max-width: 800px;
+    padding: 10px 50px;
+    transition: ease-out 0.5s;
 }
 
 .slogan:hover {
-   transition: ease-in .5s;
-   background-color: rgba(0, 0, 0, 0.6)
+    transition: ease-in .5s;
+    background-color: rgba(0, 0, 0, 0.6)
 }
 
 .slogan>h1 {
-   color: grey;
-   margin: auto 10px;
+    color: grey;
+    margin: auto 10px;
 }
 
 .slogan h1:last-child {
-   color: white;
+    color: white;
 }
 
 .slogan h1:last-child:hover {
-   color: #4099FF;
-   transition: .3s;
+    color: #4099FF;
+    transition: .3s;
 }
 
 
 /* BENEFITS */
 
-.benefits-row {
-   height: 100%;
-   background-color: white;
-   /* padding: 10px; */
+.benefits {
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 190px;
+    /* width: 100%; */
+    text-align: center;
+    /* float: left; */
 }
 
+.benefits .col-3 {
+    float: left;
+}
+
+
+/* .benefits-row {
+      width: 100%;  
+     background-color: white; 
+     padding: 10px;  
+     float: left; 
+} */
+
 .benefits-btn {
-   width: 50px;
-   height: 50px;
-   border: 0;
-   color: white;
-   border-radius: 20%;
-   background-color: #313234;
-   cursor: pointer;
-   font-size: 25px;
-   line-height: 50px;
+    width: 80px;
+    height: 80px;
+    border: 0;
+    color: white;
+    border-radius: 20%;
+    background-color: #313234;
+    cursor: pointer;
+    font-size: 35px;
+    line-height: 80px;
 }
 
 .benefits-btn-central {
-   background-color: #4099FF;
+    background-color: #4099FF;
+    background: #4edbd4;
 }
 
 .benefits-btn:hover>i {
-   transform: scale(1.1);
-   /* transition: ease-in-out .5s; */
-   color: crimson;
+    transform: scale(1.1);
+    /* transition: ease-in-out .5s; */
+    color: crimson;
 }
 
-.benefits-row h3 {
-   font-weight: bold;
-   margin: 5px;
+.benefits h3 {
+    font-weight: bold;
+    margin: 10px;
+    text-transform: uppercase;
 }
 
-.benefits-row p {
-   margin: 3px;
-   font-size: 10px;
+.benefits p {
+    margin: 4px;
+    font-size: 10px;
 }
 
 
@@ -165,10 +190,21 @@ header>nav>img {
 /* WHY does it take so much space */
 
 .quote {
-   /* margin: 100px; */
-   text-align: center;
-   /* height: 150px; */
-   float: left;
+    margin: 50px auto;
+    text-align: center;
+    float: left;
+    /* padding: 50px; */
+}
+
+.quote p {
+    margin: 4px;
+}
+
+.quote p:first-child {
+    text-transform: uppercase;
+    margin: 24px auto;
+    font-weight: bold;
+    font-size: 35px;
 }
 
 
@@ -178,49 +214,50 @@ header>nav>img {
 /* WHY white stripes between rows */
 
 .gallery {
-   width: 100%;
-   margin: 0 auto;
-   float: left;
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    float: left;
 }
 
 .gallery .col-3 {
-   position: relative;
+    position: relative;
 }
 
 .gallery img {
-   width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .gallery-btns {
-   display: none;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background: rgba(0, 0, 0, 0.5);
-   height: 100%;
-   width: 100%;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
 }
 
 .gallery .col-3:hover .gallery-btns {
-   display: block;
+    display: block;
 }
 
 
 /* HOWTO center vertically*/
 
 .gallery-btn {
-   margin: 60px 30px;
-   border: 0;
-   border-radius: 20%;
-   height: 25px;
-   width: 30px;
-   background-color: white;
+    margin: 60px 30px;
+    border: 0;
+    border-radius: 20%;
+    height: 25px;
+    width: 30px;
+    background-color: white;
 }
 
 .gallery-btn:hover {
-   background-color: rgba(0, 0, 0, 0.3);
-   color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
 }
 
 
@@ -231,19 +268,103 @@ header>nav>img {
 
 
 /* WHY two lines without float:left */
+
+
 /* WHY 0 height for .team in devtools */
 
-.team img {
-   border-radius: 50%;
-   width: 20%;
-   float: left;
+.team {
+     margin: 50px auto; 
+    /* width: 80%; */
+    float: left;
 }
+
+.team img {
+    border-radius: 50%;
+    width: 80%;
+    /* margin: 50px auto; */
+}
+
 
 /* HOWTO use absolute-relative multiple times 
 (Secretary shows up on Placki button if set for .person p) */
 
 .team .person {
-   /* position: relative; */
-   margin: 20px;
-   display: block;
+    /* display: inline-block; */
+    /* position: relative; */
+    /* margin: 20px; */
+    text-align: center;
+}
+
+.team .name {
+    font-weight: bold;
+}
+
+
+/* IPAD */
+
+.ipad {
+    height: 250px;
+    float: left;
+    background-color: #313234;
+}
+
+.ipad img {}
+
+.ipad .col-4 {
+    /* background-image: url(https://support.apple.com/library/content/dam/edam/applecare/images/en_US/ipad/ipadpro/identify-ipad-pro.jpg); */
+    height: 250px;
+    /* background-size: cover; */
+    /* background-position: 150px 200px; */
+    overflow: hidden;
+}
+
+.ipad .col-8 {
+    /* padding: 10px; */
+    height: 250px;
+    /* vertical-align: center; */
+}
+
+.ipad h1 {
+    color: white;
+    margin-top: 55px;
+}
+
+.ipad p {
+    margin: 10px 20px;
+    /* line-height: 100px; */
+    color: white;
+    font-size: 20px;
+}
+
+
+/* NUMBERS */
+
+.numbers {
+    float: left;
+    /* display: block; */
+}
+
+
+/* WHY do devtools show 50px margin */
+
+.numbers p:first-child {
+    font-size: 50px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #4099FF;
+}
+
+.numbers .col-2 {
+    padding: 10px;
+}
+
+
+/* WHY footer splits quote into two pieces or goes to .gallery */
+
+footer {
+    height: 50px;
+    background-color: #313234;
+    color: white;
+    text-align: center;
+    float: left;
 }
