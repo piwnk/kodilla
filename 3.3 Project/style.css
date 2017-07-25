@@ -8,10 +8,13 @@ body {
    margin: 0 auto;
 }
 
+/* WHY float: left on .container puts white line between header and jumbo */
+
 .container {
    max-width: 1200px;
    /* margin: 0 auto; */
    width: 100%;
+   /* float: left; */
 }
 
 nav:before,
@@ -156,18 +159,16 @@ header>nav>img {
 /* QUOTE */
 
 
-/* HOWTO use margins correctly */
-
-
 /* WHY devtools show weird height */
 
 
-/* WHY does it takes so much space */
+/* WHY does it take so much space */
 
 .quote {
    /* margin: 100px; */
    text-align: center;
    /* height: 150px; */
+   float: left;
 }
 
 
@@ -179,6 +180,7 @@ header>nav>img {
 .gallery {
    width: 100%;
    margin: 0 auto;
+   float: left;
 }
 
 .gallery .col-3 {
@@ -229,6 +231,7 @@ header>nav>img {
 
 
 /* WHY two lines without float:left */
+/* WHY 0 height for .team in devtools */
 
 .team img {
    border-radius: 50%;
@@ -236,14 +239,11 @@ header>nav>img {
    float: left;
 }
 
-.team .person {
-   position: relative;
-   margin: 20px;
-}
+/* HOWTO use absolute-relative multiple times 
+(Secretary shows up on Placki button if set for .person p) */
 
-.team h1 {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+.team .person {
+   /* position: relative; */
+   margin: 20px;
+   display: block;
 }
