@@ -9,7 +9,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+   max-width: 1200px;
+   /* margin: 0 auto; */
+   width: 100%;
 }
 
 nav:before,
@@ -78,14 +80,13 @@ header>nav>img {
    overflow: hidden;
    width: 100%;
    height: calc(100vh - 50px - 200px);
-   /* height: 95vh; */
 }
 
 .slogan {
    background-color: rgba(0, 0, 0, 0.5);
    float: right;
-   margin-top: 40vh;
-   width: 70vw;
+   margin-top: 30vh;
+   width: 60vw;
    max-width: 800px;
    padding: 10px 50px;
    transition: ease-out 0.5s;
@@ -111,43 +112,42 @@ header>nav>img {
 }
 
 
-/* RSA */
+/* BENEFITS */
 
-.rsa-row {
-   /* height: 150px; */
+.benefits-row {
+   height: 100%;
    background-color: white;
-   padding: 10px;
+   /* padding: 10px; */
 }
 
-.rsa-btn {
+.benefits-btn {
    width: 50px;
    height: 50px;
    border: 0;
    color: white;
    border-radius: 20%;
    background-color: #313234;
-   /* margin: 30px 10px;  */
    cursor: pointer;
    font-size: 25px;
    line-height: 50px;
 }
 
-.rsa-btn-central {
+.benefits-btn-central {
    background-color: #4099FF;
 }
 
-.rsa-btn:hover>i {
+.benefits-btn:hover>i {
    transform: scale(1.1);
    /* transition: ease-in-out .5s; */
    color: crimson;
 }
 
-.rsa-row h3 {
+.benefits-row h3 {
    font-weight: bold;
    margin: 5px;
 }
 
-.rsa-row p {
+.benefits-row p {
    margin: 3px;
    font-size: 10px;
 }
@@ -156,19 +156,29 @@ header>nav>img {
 /* QUOTE */
 
 
-/* TOFIX */
+/* HOWTO use margins correctly */
+
+
+/* WHY devtools show weird height */
+
+
+/* WHY does it takes so much space */
 
 .quote {
-   margin: 100px;
+   /* margin: 100px; */
    text-align: center;
+   /* height: 150px; */
 }
 
 
 /* GALLERY */
 
+
+/* WHY white stripes between rows */
+
 .gallery {
+   width: 100%;
    margin: 0 auto;
-   padding: 0;
 }
 
 .gallery .col-3 {
@@ -179,41 +189,61 @@ header>nav>img {
    width: 100%;
 }
 
-.gallery .shader {
-   
-}
-
-.gallery .col-3 {
-   background: black;
-}
-
 .gallery-btns {
    display: none;
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-}
-
-.gallery .col-3:hover {
-   opacity: 0.9;
+   background: rgba(0, 0, 0, 0.5);
+   height: 100%;
+   width: 100%;
 }
 
 .gallery .col-3:hover .gallery-btns {
    display: block;
 }
 
+
+/* HOWTO center vertically*/
+
 .gallery-btn {
-   margin: 0 10px;
+   margin: 60px 30px;
    border: 0;
-   border-radius: 10%;
+   border-radius: 20%;
    height: 25px;
    width: 30px;
-   margin: 10px 10px;
    background-color: white;
 }
 
 .gallery-btn:hover {
-   background-color: rgba(0, 0, 0, 0.7);
+   background-color: rgba(0, 0, 0, 0.3);
    color: white;
+}
+
+
+/* TEAM */
+
+
+/* WHY not centered horizontally (margin: 0 auto; set for container) */
+
+
+/* WHY two lines without float:left */
+
+.team img {
+   border-radius: 50%;
+   width: 20%;
+   float: left;
+}
+
+.team .person {
+   position: relative;
+   margin: 20px;
+}
+
+.team h1 {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
