@@ -1,19 +1,21 @@
- row:before,
+  row:before,
  row:after {
     content: "";
     display: table;
     clear: both;
+ } 
+
+ .row {
+    /* margin: 0 auto; */
+    float: left;
+    width: 100%;
+    /* height: auto; */
  }
 
-row {
-   margin: 0 auto;
-   height: auto;
-}
-
  [class*="col-"] {
-    float: left;
-    /* min-height: 1px;  */
-    /* padding: 2px; */
+     float: left; 
+    min-height: 1px;
+     /* padding: 2px;  */
     text-align: center;
  }
  /* COL */

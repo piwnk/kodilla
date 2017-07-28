@@ -1,0 +1,126 @@
+    /* .nav created to set background other than container */
+
+    .nav {
+       background-color: black;
+    }
+
+    .logo {
+       height: 60px;
+       width: 160px;
+       margin: 5px;
+       /* transform: scale(.9); */
+       filter: invert(100%);
+       float: left;
+       /* background: lightblue; */
+    }
+
+    nav ul {
+       margin: 0;
+       padding: 0;
+       float: right;
+       list-style-type: none;
+       font-size: 0;
+    }
+
+    nav ul>li {
+       display: inline-block;
+       width: 100px;
+       /* background-color: rgba(0, 0, 0, 0.6); */
+       text-align: center;
+       /* margin: 0; */
+       font-size: 1rem;
+    }
+
+    nav ul>li>a {
+       /* line-height: 50px; */
+       line-height: 70px;
+       text-decoration: none;
+       text-transform: uppercase;
+       color: white;
+    }
+
+    nav ul>li:hover>a {
+       /* color: #4099FF; */
+       color: black;
+       transition: ease-in-out .5s;
+    }
+
+    nav>ul>li:hover {
+       transition: .5s;
+       cursor: pointer;
+       background-color: lightgrey;
+    }
+
+    .hero {
+       height: calc(100vh - 70px);
+       width: 100%;
+       background: rgba(0, 0, 0, 0.5);
+       position: relative;
+       background-image: url(https://lh3.googleusercontent.com/rfG_XeGWq8fCAMdOQWWT_Enbc12aM2yLulv35oAFDuZt2DrNf4KCtmndWArrS1jxsqnF7cdYoZFG2H8nrQtOEGX96dZVjSfUO1NnISIQzhxOnb-q87bGTlHWW4GoRyohfCGOw_keuLHEB74YwuUN-5xZiwWfSIqGCV-9BgpWO5uXqzGQ5vHK34HnIfOX8cc0ESAxqQIaweeTjaP0cMrw5uF_H9XGlwLgL_21LHVGbu35lUFMpe3FXeOhX2F39Yp5l6_mJfI-wNsByYtZXpNih_PDHsm-quHtN2x-t61Vd2qxwxWgYZSixKKR4EHJGhVsvOyKZx7SP6jpwM-h6AW58cGTNkWlsIMMpk6kOXl69Lo4uYfM4K725bQX_HK2zj-Or4HXriIXNUu4wlYvAOell3vkPtPgTwHtSekx-OSnfu--wfpJpbpLtGLs97fVrJ0THe5_0XTCsgd8NOEvVaNNnN34PHA_fEyxkJI1UAEDo552GlQFJF9UuEzu4lJedWLMHWpRHOhB_2kdqjjwadkYtN4afgSXz96Gk4Ctj7e0tvouWyNCSgLyCrn4cYvvYkAe8lE1H0fFTD70MLeQY2mqAdqSYITR448zmzx5XrahKxBmltqolX7x1_7q_A=w1600-h900-no);
+       background-size: cover;
+    }
+
+    .slogan {
+       background-color: rgba(0, 0, 0, 0.5);
+       float: right;
+       margin-top: 250px;
+       width: 50vw;
+       max-width: 800px;
+       padding: 10px 50px;
+       transition: ease-out 0.5s;
+    }
+
+    .slogan:hover {
+       transition: ease-in .5s;
+       background-color: rgba(0, 0, 0, 0.6)
+    }
+
+    .slogan>h1 {
+       color: grey;
+       margin: auto 10px;
+    }
+
+    .slogan h1:last-child {
+       color: white;
+    }
+
+    .slogan h1:last-child:hover {
+       color: #4099FF;
+       transition: .3s;
+    }
+
+    footer p {
+       text-align: center;
+       line-height: 50px;
+    }
+
+    @media (max-width: 768px) {
+       nav .logo {
+          margin: 5px calc((100% - 170px)/2);
+       }
+       nav ul {
+          float: left;
+          margin: 0 calc((100% - 300px)/2);
+          /* max-width: 300px; */
+          /* margin-left: calc((100vw - 300px)/2);
+         margin-right: calc((100vw - 300px)/2); */
+       }
+       nav ul li {
+          margin: 0 auto;
+          width: 300px;
+       }
+
+       .slogan {
+          width: 70vw;
+       }
+    }
+    /* NIBY TO WYSTARCZY, ALE NIE DZIAŁA */
+    /* @media (max-width: 768px) {
+       nav * {
+          float: none;
+          text-align: center;
+       }
+       nav li {
+          display: block;
+       }
+    } */

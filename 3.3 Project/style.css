@@ -3,17 +3,28 @@
     box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
     margin: 0;
+    border: 1 solid black;
 }
 
+
+/* *:after,
+*:before {
+    content: "";
+    display: table;
+    clear: both;
+}      */
+
 body {
-     /* max-width: 1200px;   */
+    /* max-width: 1200px;   */
     margin: 0;
 }
 
 .container {
     margin: 0 auto;
-     max-width: 1200px; 
-    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    background: lightcyan;
+    background: grey;
 }
 
 
@@ -37,7 +48,7 @@ nav:after {
 
 header {
     background-color: #313234;
-    height: 50px;
+    /* height: 50px; */
 }
 
 header nav li {
@@ -70,13 +81,15 @@ header>nav>ul>li:hover {
     background-color: rgba(0, 0, 0, 0.8)
 }
 
-header>nav>img {}
-
 .logo {
-    padding: 10px 0;
-    padding-left: 10px;
-    height: 50px;
-    filter: invert(100%)
+    /* padding: 10px 0; */
+    /* padding-left: 10px; */
+    /* height: 50px; */
+     filter: invert(100%); 
+      height: 60px;
+      width: 160px;
+      margin: 5px;
+      /* transform: scale(.9) */
 }
 
 
@@ -126,25 +139,14 @@ header>nav>img {}
 /* BENEFITS */
 
 .benefits {
-    margin: 0 auto;
-    margin-top: 50px;
-    height: 190px;
+    /* margin-top: 50px; */
+    /* height: 190px; */
     /* width: 100%; */
     text-align: center;
-    /* float: left; */
+    /* float: left;  */
+    margin: 30px auto;
 }
 
-.benefits .col-3 {
-    float: left;
-}
-
-
-/* .benefits-row {
-      width: 100%;  
-     background-color: white; 
-     padding: 10px;  
-     float: left; 
-} */
 
 .benefits-btn {
     width: 80px;
@@ -171,13 +173,13 @@ header>nav>img {}
 
 .benefits h3 {
     font-weight: bold;
-    margin: 10px;
+     margin: 10px; 
     text-transform: uppercase;
 }
 
 .benefits p {
-    margin: 4px;
-    font-size: 10px;
+     margin: 4px; 
+    font-size: 15px;
 }
 
 
@@ -189,20 +191,21 @@ header>nav>img {}
 
 /* WHY does it take so much space */
 
-.quote {
-    margin: 50px auto;
+.quote .row {
+    margin: 30px auto;
     text-align: center;
-    float: left;
+    /* float: left; */
     /* padding: 50px; */
 }
 
-.quote p {
+
+.quote .row>div>p {
     margin: 4px;
 }
 
-.quote p:first-child {
+.quote .row>p {
     text-transform: uppercase;
-    margin: 24px auto;
+    /* margin: 24px auto; */
     font-weight: bold;
     font-size: 35px;
 }
@@ -216,7 +219,12 @@ header>nav>img {}
 .gallery {
     /* width: 100%; */
     /* margin: 0 auto;  */
-    /* float: left; */
+     /* float: left;  */
+}
+
+.gallery row {
+    /* margin: 0; */
+    float: left;
 }
 
 .gallery .col-3 {
@@ -273,27 +281,37 @@ header>nav>img {}
 /* WHY 0 height for .team in devtools */
 
 .team {
-    margin: 50px auto;
-    /* width: 80%; */
-    float: left;
-}
-
-.team img {
-    border-radius: 50%;
-    width: 80%;
     /* margin: 50px auto; */
 }
 
-
-/* HOWTO use absolute-relative multiple times 
-(Secretary shows up on Placki button if set for .person p) */
-
-.team .person {
+.team .member {
     /* display: inline-block; */
     /* position: relative; */
     /* margin: 20px; */
     text-align: center;
+    margin-left: 7%;
+    width: 24%;
+    float: left;
 }
+
+.team .circle {
+    /* position: relative; */
+}
+
+.team img {
+    border-radius: 50%;
+    width: 100%;
+    /* position: absolute; */
+}
+
+
+/* .team .job {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+} */
 
 .team .name {
     font-weight: bold;
@@ -302,9 +320,17 @@ header>nav>img {}
 
 /* IPAD */
 
+
+/* .ipad:after,
+.ipad:before {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
 .ipad {
     height: 250px;
-    /* float: left; */
+    float: left;
     background-color: #313234;
 }
 
@@ -352,6 +378,7 @@ header>nav>img {}
     font-weight: bolder;
     text-transform: uppercase;
     color: #4099FF;
+    /* margin-bottom: 20px;  */
 }
 
 .numbers .col-2 {
@@ -361,10 +388,12 @@ header>nav>img {}
 
 /* WHY footer splits quote into two pieces or goes to .gallery */
 
-footer {
+footer div {
+    width: 100%;
     height: 50px;
     background-color: #313234;
     color: white;
     text-align: center;
-    /* float: left; */
+    float: left;
+    line-height: 50px;
 }
