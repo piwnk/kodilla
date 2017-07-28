@@ -1,19 +1,8 @@
 /* BENEFITS */
 
-.benefits {}
-
 .benefit {
    margin: 50px auto;
    text-align: center;
-   /* display: flex; */
-   /* align-items: center; */
-   /* justify-content: center;  */
-}
-
-.btn-wrapper,
-.btn-desc {
-   /* width: 100%;  */
-   /* text-align: center; */
 }
 
 .benefits-btn {
@@ -26,7 +15,6 @@
    cursor: pointer;
    font-size: 35px;
    line-height: 80px;
-   /* text-align: center;  */
 }
 
 .benefits-btn-central {
@@ -63,7 +51,6 @@
 
 .quote .row>p {
    text-transform: uppercase;
-   /* margin: 24px auto; */
    font-weight: bold;
    font-size: 35px;
 }
@@ -88,15 +75,18 @@
    border: 0;
    border-radius: 20%;
    margin: 25% 10%;
-   /* height: 3em; */
-   width: 2em;
+   /* height: 12%;  */
+   /* width: 10%; */
    background-color: white;
    font-size: 1.5em;
+   line-height: 100%;
+   border: 1px solid white;
 }
 
 .gallery-btn:hover {
    background-color: rgba(0, 0, 0, 0.5);
    color: white;
+   border: 1px solid white;
 }
 
 .gallery-btns {
@@ -109,7 +99,6 @@
    background: rgba(0, 0, 0, 0.5);
    height: 100%;
    width: 100%;
-   line-height: 100%;
 }
 
 .gallery .col-3:hover .gallery-btns {
@@ -149,7 +138,6 @@
 
 .member .name {
    text-align: center;
-   /* position: absolute; */
    margin-top: 20px;
    font-size: 200%;
 }
@@ -158,33 +146,28 @@
 /* IPAD */
 
 .ipad {
-   /* height: 250px; */
    background-color: #313234;
-}
-
-.ipad .col-4 {
-   height: 250px;
-   /* height: 40%; */
-   overflow: hidden;
-}
-
-.ipad h1 {
+   background-image: url(http://www.pngmart.com/files/3/IPad-Tablet-Transparent-Background.png);
+   background-repeat: no-repeat;
+   background-position: 20px 30px;
    color: white;
-   margin-top: 55px;
+   background-size: 45%;
+}
+
+.ipad .col-6 {
+   margin: 30px 10px;
+   float: right;
 }
 
 .ipad p {
    margin: 10px 20px;
-   /* line-height: 100px; */
-   color: white;
-   /* font-size: 20px; */
 }
 
 
 /* NUMBERS */
 
 .numbers {
-   margin: 30px auto;
+   margin: 10px auto;
 }
 
 .numbers p:first-child {
@@ -194,9 +177,39 @@
    color: #4099FF;
 }
 
-.numbers .col-2 {
-   padding: 10px;
+.numbers .figure-wrp {
+   position: relative;
+   margin: 2em auto;
 }
+
+.circle {
+   border: 5px solid #4099FF;
+   border-radius: 50%;
+   width: 9em;
+   height: 9em;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+}
+
+.numbers .figure-wrp:hover .circle {
+   display: block;
+}
+
+
+/* .numbers .figure-wrp>div {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+} */
+
+
+/* .numbers .col-2 {
+   padding: 10px;
+} */
 
 
 /* ABOUT */
@@ -206,9 +219,9 @@
    color: white;
 }
 
-.about .col-4 {
-   /* margin: 20px 20px;   */
+.about>.row>div {
    height: 100%;
+   margin: 5px;
 }
 
 .about h1 {
@@ -222,10 +235,46 @@
 
 /* MAP */
 
+.map {
+   margin: 0 auto;
+   /* width: 90%;   */
+   /* height: 90%;   */
+}
+
 .map img {
+   width: 50%;
+   /* height: 90%; */
+}
+
+
+/* SOCIAL MEDIA */
+
+.socmed-btn {
    width: 100%;
-   height: 100%;
-   /* float: left; */
+   border: 0;
+   text-align: center;
+   height: 3em;
+   color: white;
+}
+
+.socmed-btn:hover {
+   opacity: .7;
+}
+
+.twitter {
+   background-color: #4099FF;
+}
+
+.facebook {
+   background-color: #3B5998;
+}
+
+.google-plus {
+   background-color: #DB5A3C;
+}
+
+.instagram {
+   background-color: #5C3D2E;
 }
 
 @media (max-width: 768px) {
@@ -236,10 +285,7 @@
    .photo img  */
    {
       display: block;
-      width: 70%;
-      margin: 10px 15%;
-   }
-   .member .name {
-      font-size:
+      width: 50%;
+      margin: 10px 25%;
    }
 }

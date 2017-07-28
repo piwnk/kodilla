@@ -1,0 +1,29 @@
+.gallery {
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.gallery img {
+   margin: 10px;
+}
+
+.cards {
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.card {
+   width: 200px;
+   padding: 10px;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+footer p {
+   margin: 5px;
+}
+
+.foot-central {
+   flex-grow: 2;
+}

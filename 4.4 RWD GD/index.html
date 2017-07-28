@@ -16,12 +16,20 @@
    <!-- WHY div and not nav? -->
    <nav class="nav container">
       <img class="logo" src="https://www.pixelmedialabs.com/img/picts/logo.png" alt="logo">
-      <ul>
-         <li><a href="#">About</a></li>
-         <li><a href="#">Products</a></li>
-         <li><a href="#">Projects</a></li>
-         <li><a href="#">Career</a></li>
-         <li><a href="#">Contact</a></li>
+      <ul class="menu">
+         <li class="menu-item">
+            <a class="nav-text" href="#">About</a>
+            <!-- <ul class="submenu">
+               <li class="menu-item"><a class="nav-text" href="#">Co</a></li>
+               <li class="menu-item"><a class="nav-text" href="#">my</a></li>
+               <li class="menu-item"><a class="nav-text" href="#">tu</a></li>
+               <li class="menu-item"><a class="nav-text" href="#">robimy?</a></li>
+            </ul> -->
+         </li>
+         <li class="menu-item"><a class="nav-text" href="#">Products</a></li>
+         <li class="menu-item"><a class="nav-text" href="#">Projects</a></li>
+         <li class="menu-item"><a class="nav-text" href="#">Career</a></li>
+         <li class="menu-item"><a class="nav-text" href="#">Contact</a></li>
       </ul>
    </nav>
    <header class="hero container">
@@ -151,7 +159,6 @@
          </div>
       </div>
    </section>
-
    <section class="team container">
       <div class="member narrow">
          <div class="face">
@@ -181,10 +188,7 @@
    </section>
    <section class="ipad container">
       <div class="row">
-         <div class="col-4">
-            <img src="http://www.pngmart.com/files/3/IPad-Tablet-Transparent-Background.png" alt="">
-         </div>
-         <div class="col-8">
+         <div class="col-6">
             <h1>Putin na razie nie zabiera głosu</h1>
             <p>Rosyjscy parlamentarzyści zwrócili się do Władimira Putina, aby zlecił odpowiednim organom opracowanie propozycji
                "o charakterze ograniczającym" współpracę z Polską. Ma to związek z nowelizacją ustawy o zakazie propagowania
@@ -195,22 +199,34 @@
    </section>
    <section class="numbers container">
       <div class="row">
-         <div class="col-offset-2"></div>
-         <div class="col-2">
-            <p>455</p>
-            <p>followers</p>
+         <div class="col-offset-2 col-s-0"></div>
+         <div class="figure-wrp col-2 col-s-6">
+            <div class="circle"></div>
+            <div class="figure">
+               <p>455</p>
+               <p>followers</p>
+            </div>
          </div>
-         <div class="col-2">
-            <p>1991</p>
-            <p>since</p>
+         <div class="figure-wrp col-2 col-s-6">
+            <div class="circle"></div>
+            <div class="figure">
+               <p>1991</p>
+               <p>since</p>
+            </div>
          </div>
-         <div class="col-2">
-            <p>806</p>
-            <p>happy clients</p>
+         <div class="figure-wrp col-2 col-s-6">
+            <div class="circle"></div>
+            <div class="figure">
+               <p>806</p>
+               <p>happy clients</p>
+            </div>
          </div>
-         <div class="col-2">
-            <p>923</p>
-            <p>projects</p>
+         <div class="figure-wrp col-2 col-s-6">
+            <div class="circle"></div>
+            <div class="figure">
+               <p>923</p>
+               <p>projects</p>
+            </div>
          </div>
       </div>
    </section>
@@ -223,22 +239,30 @@
          </div>
          <div class="col-4 col-s-12">
             <h1>get in touch</h1>
-            <p>Social media</p>
+            <p>Address and stuff</p>
          </div>
          <div class="col-4 col-s-12 map">
             <img src="https://maps.googleapis.com/maps/api/staticmap?center=Warsaw&scale=2&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:red%7Clabel:Company%7C40.718217,-73.998284&key=AIzaSyAM25w4QrwIXC7VoKjllL31o4UjhP7lYFc"
                alt="">
-            <!-- <h1>Some</h1>
-               <p>Incydent z udziałem funkcjonariusza BOR na Mazowszu. Na policję w Żurominie zgłosił się pijany 40-latek, który twierdził, że został pobity na stacji benzynowej.</p> -->
          </div>
-      </div>
    </section>
-   <!-- <section class="map container">
-      <img src="https://maps.googleapis.com/maps/api/staticmap?center=Warsaw&scale=2&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:red%7Clabel:Company%7C40.718217,-73.998284&key=AIzaSyAM25w4QrwIXC7VoKjllL31o4UjhP7lYFc"
-         alt="">
-   </section> -->
    <footer>
       <div class="container">
+         <div class="row">
+            <div class="col-3 col-s-6">
+               <button class="socmed-btn facebook"><i class="fa fa-facebook"></i></button>
+            </div>
+            <div class="col-3 col-s-6">
+               <button class="socmed-btn twitter"><i class="fa fa-twitter"></i></button>
+            </div>
+            <div class="col-3 col-s-6">
+               <button class="socmed-btn google-plus"><i class="fa fa-google-plus"></i></button>
+            </div>
+            <div class="col-3 col-s-6">
+               <button class="socmed-btn instagram"><i class="fa fa-instagram"></i></button>
+            </div>
+
+         </div>
          <p>Copyright 2017 <i class="fa fa-copyright" aria-hidden="true"></i></p>
       </div>
    </footer>
