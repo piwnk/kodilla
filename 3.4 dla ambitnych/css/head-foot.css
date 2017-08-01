@@ -60,3 +60,17 @@
    right: 0;
    bottom: -300px;
 }
+
+footer {
+   background-color: rgb(25, 35, 49);
+   color: white;
+}
+
+footer .container {
+   display: grid;
+   grid-template: 1fr 1fr / 1fr 1fr 1fr 50%;
+}
+
+footer .in-touch {
+   grid-column: 1 / 4;
+}
