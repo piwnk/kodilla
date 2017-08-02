@@ -1,0 +1,22 @@
+.container {
+   margin: 40px auto;
+   text-align: center;
+}
+
+form {
+   width: 50%;
+   margin: 0px auto;
+}
+
+textarea,
+.row {
+   margin-top: 30px;
+}
+
+img {
+   padding: 0;
+}
+
+img:hover {
+   box-shadow: 0 0 50px #ccc;
+}
