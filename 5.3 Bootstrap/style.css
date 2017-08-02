@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+* {
+   box-sizing: border-box;
+   font-family: "Quicksand", sans-serif;
+}
+
+.container {
+   margin: 40px auto;
+   text-align: center;
+}
+
+.table {
+   width: 60%;
+   margin: 0px auto;
+}
+
+form {
+   width: 50%;
+   min-width: 100px;
+   margin: 0px auto;
+}
+
+textarea {
+   margin-top: 15px;
+   padding: 0;
+   width: 100%;
+}
+
+img {
+   padding: 15px;
+}
+
+img:hover {
+   box-shadow: 0 0 50px black;
+}

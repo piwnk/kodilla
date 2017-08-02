@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 * {
-   border: 1px solid black;
+   border: 1px solid coral;
+   box-sizing: border-box;
+   font-family: "Quicksand", sans-serif;
 }
 
-.flex {
+body {
+   margin: 0 auto;
+}
+
+header div,
+header .menu,
+section,
+section div,
+footer {
    display: flex;
-   background: grey;
 }
