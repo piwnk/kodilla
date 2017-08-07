@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/* WHY href to id doesn't move to the start of the div */
+
+
+/* WHY emoji not showing up on modal */
+
+
+/* WHY not vertically aligned when border is off*/
+
+
+/* WHY heights different in nav even with border-box  */
+
+
+/* WHY hamburger not aligned vertically */
+
+* {
+   box-sizing: border-box;
+   font-family: "Quicksand", sans-serif;
+   /* border: 1px solid coral; */
+}
+
+body {
+   margin: 0 auto;
+   padding-top: 60px;
+}
+
+.container {
+   margin: 0 auto;
+}
+
+section {
+   margin: 40px auto;
+}
+
+nav {
+   height: 60px;
+}
+
+#hamburger {
+   height: 70%;
+   color: white;
+   line-height: 90%;
+   align-items: center;
+}
+
+@media (max-width: 768px) {
+   nav li {
+      /* background: rgba(0, 0, 0, .5); */
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+   }
+   .navlink {
+      color: black
+   }
+}
+
+.logo {
+   filter: invert();
+   transform: scale(.7);
+   height: 60px;
+}
+
+#hobbies * {
+   text-align: center;
+   /* margin: 0 auto; */
+}
+
+#hobbies img {
+   /* height: 600px;
+   width: 800px; */
+   width: 100%;
+}
+
+#hobbies a {
+   font-size: 1.5em;
+}
+
+.tab-content>div {
+   /* border-color: lightgrey;
+   border-style: solid;
+   border-width: 1px; */
+   /* WHY boder disappears on margin part of side when off */
+   /* border-top-width: 0;  */
+}
+
+.modal-footer {
+   display: flex;
+   justify-content: space-between;
+}
