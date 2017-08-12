@@ -1,0 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext);
+span {
+  font: 100% "Montserrat", sans-serif;
+  color: #53B863; }
+
+h1 {
+  font: 24px/36px "Montserrat", sans-serif;
+  background-color: #53B863;
+  color: white;
+  display: block; }

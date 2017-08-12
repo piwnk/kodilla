@@ -17,7 +17,7 @@
 * {
    box-sizing: border-box;
    font-family: "Quicksand", sans-serif;
-   /* border: 1px solid coral; */
+   border: 1px solid coral;
 }
 
 body {
@@ -54,6 +54,10 @@ nav {
    .navlink {
       color: black
    }
+}
+
+.navbar-header {
+   text-align: center;
 }
 
 .logo {
