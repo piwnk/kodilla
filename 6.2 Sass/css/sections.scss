@@ -1,0 +1,215 @@
+/* BENEFITS */
+
+.benefits {
+    // display: flex;
+    h3 {
+        font-weight: bold;
+        margin: 10px;
+        text-transform: uppercase;
+    }
+    p {
+        margin: 4px;
+        font-size: 15px;
+    }
+    .benefit {
+        margin: 50px auto;
+        text-align: center;
+        .benefit-btn {
+            margin: 4px auto;
+            width: 80px;
+            border: 0;
+            color: white;
+            border-radius: 20%;
+            background-color: $color-dark;
+            cursor: pointer;
+            font-size: 35px;
+            line-height: 80px;
+            &:hover>i {
+                transform: scale(1.1);
+                color: crimson;
+            }
+        }
+        &:nth-child(even) .benefit-btn {
+            background-color: $color-twitter;
+        }
+    }
+}
+
+
+/* QUOTE */
+
+.quote {
+    margin: 50px auto;
+    text-align: center;
+    h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 35px;
+    }
+    p {
+        margin: 4px;
+        &:last-child {
+            font-weight: bold;
+        }
+    }
+}
+
+
+/* GALLERY */
+
+//WHY SECOND LINE BUTTONS DON'T FIT
+.gallery {
+    img {
+        width: 100%;
+    }
+    .col-3 {
+        position: relative;
+        height: 100%;
+        &:hover .gallery-btns {
+            display: block;
+        }
+    }
+    .gallery-btns {
+        display: none;
+        /* display: block; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $color-halfblack;
+        height: 100%;
+        width: 100%;
+        .gallery-btn {
+            border: 0;
+            border-radius: 20%;
+            margin: 25% 10%;
+            background-color: white;
+            font-size: 1.5em;
+            line-height: 100%;
+            border: 1px solid white;
+            &:hover {
+                background-color: $color-halfblack;
+                color: white;
+                border: 1px solid white;
+            }
+        }
+    }
+}
+
+
+/* TEAM */
+
+.team {
+    margin: 50px auto;
+    .member {
+        margin-left: 7%; // WHY not inheriting .narrow width 100%
+        width: 24%;
+        float: left;
+        .face {
+            position: relative;
+            background-image: url(http://lorempixel.com/500/500);
+            border-radius: 50%;
+            padding-bottom: 100%;
+            background-size: cover;
+            p {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: white;
+                transform: translate(-50%, -50%);
+                font-size: 2em;
+            }
+        }
+        .name {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 200%;
+        }
+    }
+}
+
+
+/* IPAD */
+
+.ipad {
+    background-color: $color-dark;
+    background-image: url(http://www.pngmart.com/files/3/IPad-Tablet-Transparent-Background.png);
+    background-repeat: no-repeat;
+    background-position: 20px 30px;
+    color: white;
+    background-size: 45%;
+    .col-6 {
+        margin: 30px 10px;
+        float: right;
+    }
+    p {
+        margin: 10px 20px;
+    }
+}
+
+
+/* NUMBERS */
+
+.numbers {
+    margin: 10px auto; 
+    
+    // display: flex;
+    // flex-wrap: wrap;
+    p:first-child {
+        font-size: 50px;
+        font-weight: bolder; // text-transform: uppercase;
+        color: $color-twitter;
+    }
+    .figure-wrp {
+        position: relative;
+        margin: 2em auto;
+        .circle {
+            border: 5px solid $color-twitter;
+            border-radius: 50%;
+            width: 9em;
+            height: 9em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        &:hover .circle {
+            display: block;
+        }
+    }
+}
+
+
+/* ABOUT */
+
+.about {
+    background-color: $color-dark;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    * {
+        // text-align: left;
+    }
+    h1 {
+        text-transform: uppercase;
+    }
+    &>div {
+        // height: 100%;
+        // float: left;
+        margin: 5px;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            min-width: (100% / 3);
+        }
+    }
+    .map {
+        margin: 0 auto; // width: 100%;
+        img {
+            max-width: 100%;
+        }
+    }
+}
