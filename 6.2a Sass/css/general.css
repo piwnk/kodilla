@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  /* margin: 0 auto; */
+  max-width: 1800px;
+  /* min-width: 768px;  */
+  /* flex-grow: 1; */
+  /* flex-basis: auto;  */
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  padding: 75px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+i {
+  margin: 0 5px;
+}
+ 
+
+ /*# sourceMappingURL= general.css.map */

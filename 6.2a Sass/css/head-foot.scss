@@ -1,0 +1,107 @@
+.jumbo {
+    /* background-image: url(https://static.pexels.com/photos/37836/silhouette-fitness-bless-you-bike-37836.jpeg); */
+    background-image: url(https://static.pexels.com/photos/416117/pexels-photo-416117.jpeg);
+    background-size: cover;
+    background-position: left;
+    background-position: center;
+    height: 70vh;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70vh;
+        position: relative;
+    }
+    .take {
+        display: flex;
+        align-items: center;
+        color: white;
+        height: 2em;
+        margin-top: -30px;
+        margin-left: 0;
+        p {
+            margin-left: 5px;
+            font-family: 'Lobster', cursive;
+            font-size: 1.5em;
+        }
+        .circles {
+            position: relative;
+            width: 2em;
+            [class*="circle-"] {
+                position: absolute;
+                border: 1.5px solid white;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .circle-small {
+                width: 2em;
+                height: 2em;
+            }
+            .circle-big {
+                width: 1em;
+                height: 1em;
+            }
+        }
+    }
+    .slogan {
+        color: white;
+        width: 35%;
+        margin-left: 0;
+    }
+    .phone {
+        transform: scale(.8);
+        position: absolute;
+        right: 0;
+        bottom: -300px;
+    }
+}
+
+footer {
+    background-color: rgb(25, 35, 49);
+    color: white;
+    padding: 30px 0;
+    .container {
+        display: grid;
+        /* grid-template: 1fr 1fr / 1fr 1fr 1fr 50%; */
+        grid-template: 1fr 1fr / 1fr 1fr;
+        padding: 30px;
+        /* align-items: center; */
+        grid-gap: 50px;
+    }
+    .newsletter {
+        input {
+            width: 90%;
+            height: 3em;
+        }
+        button {
+            height: 3em;
+            width: 10%;
+            border-width: 0;
+            background-color: rgb(129, 201, 155);
+            color: white;
+        }
+    }
+    .rfh {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+         h4 {
+            margin: 10px 0;
+        }
+        footer .in-touch p,
+        footer .rfh p {
+            font-size: .7em;
+        }
+    }
+    footer .newsletter p {
+        margin: 0;
+        font-size: .7em;
+        color: grey;
+    }
+}
