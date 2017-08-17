@@ -75,24 +75,37 @@ footer {
 
 footer .container {
   display: grid;
-  /* grid-template: 1fr 1fr / 1fr 1fr 1fr 50%; */
   grid-template: 1fr 1fr / 1fr 1fr;
   padding: 30px;
-  /* align-items: center; */
   grid-gap: 50px;
 }
 
-footer .newsletter input {
+@media (max-width: 768px) {
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer p {
+  font-size: .7em;
+}
+
+footer .intouch input {
   width: 90%;
   height: 3em;
 }
 
-footer .newsletter button {
+footer .intouch button {
   height: 3em;
   width: 10%;
   border-width: 0;
   background-color: #81c99b;
   color: white;
+}
+
+footer .intouch p {
+  margin: 0;
+  color: grey;
 }
 
 footer .rfh {
@@ -108,17 +121,6 @@ footer .rfh * {
 
 footer .rfh h4 {
   margin: 10px 0;
-}
-
-footer .rfh footer .in-touch p,
-footer .rfh footer .rfh p {
-  font-size: .7em;
-}
-
-footer footer .newsletter p {
-  margin: 0;
-  font-size: .7em;
-  color: grey;
 }
  
 

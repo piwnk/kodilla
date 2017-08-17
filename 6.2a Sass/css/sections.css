@@ -10,7 +10,6 @@
 }
 
 .start div {
-  margin: 0;
   padding: 0;
 }
 
@@ -33,13 +32,15 @@
   grid-row: 2;
 }
 
-/* [class*="lorem-"] {
-    margin-left: 50px; 
-    margin-right: 50px;
-} */
 .gallery {
   display: grid;
-  grid-template: 50% 50%/repeat(4, 25%);
+  grid-template: 50% 50%/repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template: 50% 50%/repeat(2, 1fr);
+  }
 }
 
 .gallery div {
@@ -48,10 +49,8 @@
   justify-content: space-around;
   align-items: flex-start;
   color: white;
-  /* height: 250px; */
   padding-left: 20px;
   padding-right: 20px;
-  /* padding: 20px; */
 }
 
 .gallery div:hover {
@@ -102,7 +101,6 @@
 .detail {
   margin-top: 20px;
   margin-right: 20px;
-  /* color: grey; */
 }
 
 .detail:last-of-type {
@@ -125,7 +123,6 @@
 .power {
   background-image: url(https://static.pexels.com/photos/162466/clock-watch-time-hand-162466.jpeg);
   background-size: cover;
-  /* background-position-y: 20px; */
 }
 
 .power .container {
@@ -144,6 +141,13 @@
 .shop .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .shop .container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
 }
 
 .shop .container > div {
@@ -171,6 +175,14 @@
   text-transform: uppercase;
 }
 
+.shop .container > div:hover {
+  box-shadow: 0 0 50px #ccc;
+}
+
+.shop .container > div:hover button:first-of-type {
+  background-color: #bd8bbf;
+}
+
 .shop .container p {
   color: #93a5b3;
 }
@@ -178,14 +190,6 @@
 .shop .container i {
   color: #c5c5c5;
   font-size: 1.5em;
-}
-
-.shop .container > div:hover {
-  box-shadow: 0 0 50px #ccc;
-}
-
-.shop .container > div:hover button:first-of-type {
-  background-color: #bd8bbf;
 }
  
 

@@ -571,7 +571,7 @@ footer .socmed-btns div:nth-child(4) button {
 
 @media (min-width: 768px) {
   .about > div {
-    min-width: 100% / 3;
+    min-width: 33.33333%;
   }
 }
 
