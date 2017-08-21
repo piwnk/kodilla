@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+* {
+//   box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  /* margin: 0 auto; */
+  border: 1px solid coral;
+  max-width: 1800px;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  width: 1172px;
+  margin: 0 auto;
+}
+
+nav {
+   display: flex;
+   height: 50px;
+   .logo h1 {
+      display: inline;
+      &:first-child {
+         font-family: "Open Sans", sans-serif;
+      }
+   .navbar {
+      margin-right: 0;
+      list-style: none;
+      li {
+         display: inline-block;
+      }
+   }
+   }
+}
