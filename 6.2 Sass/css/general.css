@@ -3,7 +3,6 @@
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
   margin: 0;
-  border: 1px solid coral;
 }
 
 .container {
@@ -216,11 +215,6 @@
   .col-s-12 {
     width: 100%;
     min-height: 0;
-  }
-  .narrow {
-    display: block;
-    width: 100%;
-    margin: 10px 25%;
   }
 }
  

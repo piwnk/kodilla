@@ -1,0 +1,244 @@
+/* BENEFITS */
+.benefits h3 {
+  font-weight: bold;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.benefits p {
+  margin: 4px;
+  font-size: 15px;
+}
+
+.benefits .benefit {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.benefits .benefit .benefit-btn {
+  margin: 4px auto;
+  width: 80px;
+  border: 0;
+  color: white;
+  border-radius: 20%;
+  background-color: #313234;
+  cursor: pointer;
+  font-size: 35px;
+  line-height: 80px;
+}
+
+.benefits .benefit .benefit-btn:hover > i {
+  transform: scale(1.1);
+  color: crimson;
+}
+
+.benefits .benefit:nth-child(even) .benefit-btn {
+  background-color: #4099FF;
+}
+
+/* QUOTE */
+.quote {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.quote h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.quote p {
+  margin: 4px;
+}
+
+.quote p:last-child {
+  font-weight: bold;
+}
+
+/* GALLERY */
+.gallery img {
+  width: 100%;
+}
+
+.gallery .col-3 {
+  position: relative;
+  height: 100%;
+}
+
+.gallery .col-3:hover .gallery-btns {
+  display: block;
+}
+
+.gallery .gallery-btns {
+  display: none;
+  /* display: block; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.gallery .gallery-btns .gallery-btn {
+  border: 0;
+  border-radius: 20%;
+  margin: 25% 10%;
+  background-color: white;
+  font-size: 1.5em;
+  line-height: 100%;
+  border: 1px solid white;
+}
+
+.gallery .gallery-btns .gallery-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid white;
+}
+
+/* TEAM */
+.team {
+  margin: 50px auto;
+  display: flex;
+  align-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .team {
+    flex-direction: column;
+  }
+}
+
+.team .member {
+  margin-left: 7%;
+  width: 24%;
+}
+
+@media (max-width: 768px) {
+  .team .member {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+.team .member .face {
+  position: relative;
+  background-image: url(http://lorempixel.com/500/500);
+  border-radius: 50%;
+  padding-bottom: 100%;
+  background-size: cover;
+}
+
+.team .member .face p {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+
+.team .member .name {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 200%;
+}
+
+/* IPAD */
+.ipad {
+  background-color: #313234;
+  background-image: url(http://www.pngmart.com/files/3/IPad-Tablet-Transparent-Background.png);
+  background-repeat: no-repeat;
+  background-position: 20px 30px;
+  color: white;
+  background-size: 45%;
+}
+
+.ipad .col-6 {
+  margin: 30px 10px;
+  float: right;
+}
+
+.ipad p {
+  margin: 10px 20px;
+}
+
+/* NUMBERS */
+.numbers {
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.numbers p:first-child {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #4099FF;
+}
+
+.numbers .figure-wrp {
+  position: relative;
+  margin: 2em auto;
+}
+
+@media (max-width: 768px) {
+  .numbers .figure-wrp {
+    min-width: 50%;
+  }
+}
+
+.numbers .figure-wrp .circle {
+  border: 5px solid #4099FF;
+  border-radius: 50%;
+  width: 9em;
+  height: 9em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.numbers .figure-wrp:hover .circle {
+  display: block;
+}
+
+/* ABOUT */
+.about {
+  background-color: #313234;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+}
+
+.about h1 {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .about > div {
+    min-width: 33.33333%;
+  }
+}
+
+.about .map {
+  margin: 0 auto;
+}
+
+.about .map img {
+  max-width: 100%;
+}
+ 
+
+ /*# sourceMappingURL= sections.css.map */

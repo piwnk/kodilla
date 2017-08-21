@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
   /* margin: 0 auto; */
+  border: 1px solid coral;
   max-width: 1800px;
 }
 

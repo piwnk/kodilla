@@ -4,15 +4,12 @@ $color-twitter: #4099FF;
 $color-fb: #3B5998;
 $color-gplus: #DB5A3C;
 $color-insta: #5C3D2E;
-$color-halfblack: rgba(0,
-0,
-0,
-0.5);
+$color-halfblack: rgba(0, 0, 0, 0.5);
 * {
    box-sizing: border-box;
    font-family: "Quicksand", sans-serif;
    margin: 0;
-   border: 1px solid coral;
+   // border: 1px solid coral;
 }
 
 .container {
@@ -66,10 +63,5 @@ $color-halfblack: rgba(0,
          width: 100% / 12 * $i;
          min-height: 0;
       }
-   }
-   .narrow {
-      display: block;
-      width: 100%;
-      margin: 10px 25%;
    }
 }

@@ -1,3 +1,10 @@
+$color-dark: #313234;
+$color-twitter: #4099FF;
+$color-fb: #3B5998;
+$color-gplus: #DB5A3C;
+$color-insta: #5C3D2E;
+$color-halfblack: rgba(0, 0, 0, 0.5);
+
 /* BENEFITS */
 
 .benefits {
@@ -101,10 +108,18 @@
 
 .team {
     margin: 50px auto;
+    display: flex;
+    align-content: space-between;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
     .member {
-        margin-left: 7%; // WHY not inheriting .narrow width 100%
+        margin-left: 7%;
         width: 24%;
-        float: left;
+        @media (max-width: 768px) {
+            width: 70%;
+            margin: auto;
+        }
         .face {
             position: relative;
             background-image: url(http://lorempixel.com/500/500);
@@ -152,18 +167,20 @@
 /* NUMBERS */
 
 .numbers {
-    margin: 10px auto; 
-    
-    // display: flex;
-    // flex-wrap: wrap;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
     p:first-child {
         font-size: 50px;
-        font-weight: bolder; // text-transform: uppercase;
+        font-weight: bolder;
         color: $color-twitter;
     }
     .figure-wrp {
         position: relative;
         margin: 2em auto;
+        @media (max-width: 768px) {
+            min-width: 50%;
+        }
         .circle {
             border: 5px solid $color-twitter;
             border-radius: 50%;
@@ -188,26 +205,22 @@
     background-color: $color-dark;
     color: white;
     display: flex;
-    flex-wrap: wrap;
-    * {
-        // text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
     h1 {
         text-transform: uppercase;
     }
     &>div {
-        // height: 100%;
-        // float: left;
-        margin: 5px;
-        @media (max-width: 768px) {
-            width: 100%;
-        }
         @media (min-width: 768px) {
             min-width: (100% / 3);
         }
     }
     .map {
-        margin: 0 auto; // width: 100%;
+        margin: 0 auto;
         img {
             max-width: 100%;
         }
