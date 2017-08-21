@@ -12,7 +12,6 @@
   flex-direction: column;
   justify-content: space-between;
   height: 70vh;
-  position: relative;
 }
 
 .jumbo .take {
@@ -60,17 +59,18 @@
   margin-left: 0;
 }
 
-.jumbo .phone {
-  transform: scale(0.8);
-  position: absolute;
-  right: 0;
-  bottom: -300px;
-}
-
 footer {
   background-color: #192331;
   color: white;
   padding: 30px 0;
+}
+
+footer p {
+  font-size: .7em;
+}
+
+footer h4 {
+  margin: 10px 0;
 }
 
 footer .container {
@@ -86,13 +86,16 @@ footer .container {
   }
 }
 
-footer p {
-  font-size: .7em;
+footer .intouch form {
+  flex-direction: row;
 }
 
 footer .intouch input {
   width: 90%;
   height: 3em;
+  border-width: 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 footer .intouch button {
@@ -101,10 +104,12 @@ footer .intouch button {
   border-width: 0;
   background-color: #81c99b;
   color: white;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 footer .intouch p {
-  margin: 0;
+  margin: 0 5px;
   color: grey;
 }
 
@@ -117,10 +122,6 @@ footer .rfh {
 footer .rfh * {
   margin: 0;
   padding: 0;
-}
-
-footer .rfh h4 {
-  margin: 10px 0;
 }
  
 

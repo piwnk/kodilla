@@ -24,6 +24,16 @@
         grid-column: 2;
         grid-row: 2;
     }
+    .phone {
+        position: relative;
+        img {
+            // transform: scale(.8);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 85vh;
+        }
+    }
 }
 
 .gallery {

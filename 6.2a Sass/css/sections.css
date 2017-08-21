@@ -32,6 +32,17 @@
   grid-row: 2;
 }
 
+.start .phone {
+  position: relative;
+}
+
+.start .phone img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 85vh;
+}
+
 .gallery {
   display: grid;
   grid-template: 50% 50%/repeat(4, 1fr);

@@ -10,7 +10,7 @@
         flex-direction: column;
         justify-content: space-between;
         height: 70vh;
-        position: relative;
+      //   position: relative;
     }
     .take {
         display: flex;
@@ -50,12 +50,13 @@
         width: 35%;
         margin-left: 0;
     }
-    .phone {
-        transform: scale(.8);
-        position: absolute;
-        right: 0;
-        bottom: -300px;
-    }
+   //  .phone {
+   //      transform: scale(.8);
+   //      position: absolute;
+   //      right: 0;
+   //      bottom: -270px;
+   //      height: 95vh;
+   //  }
 }
 
 footer {
@@ -78,9 +79,15 @@ footer {
         }
     }
     .intouch {
+        form {
+            flex-direction: row;
+        }
         input {
             width: 90%;
             height: 3em;
+            border-width: 0;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
         }
         button {
             height: 3em;
@@ -88,9 +95,11 @@ footer {
             border-width: 0;
             background-color: rgb(129, 201, 155);
             color: white;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
         }
         p {
-            margin: 0;
+            margin: 0 5px;
             color: grey;
         }
     }
