@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600,800");
 @import url("https://fonts.googleapis.com/css?family=Kanit:100,800|Open+Sans:100,300,800|Roboto:100");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
 * {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
@@ -11,9 +12,33 @@ body {
   margin: 0 auto;
 }
 
-.container {
+.my-container {
   max-width: 1172px;
   margin: 0 auto;
+}
+
+.button-red {
+  color: white;
+  border: 1px white;
+  background-color: #e74545;
+  height: 3em;
+  width: 150px;
+  text-transform: uppercase;
+}
+
+.buttons-social {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.buttons-social button {
+  border: 1px solid lightgrey;
+  font-size: 1.5em;
+  background-color: white;
+  color: lightgrey;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
 }
 
 header {
@@ -21,6 +46,7 @@ header {
   height: 100vh;
   background-image: url(https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb);
   background-size: cover;
+  background-size: auto 120vh;
   background-position: center -30px;
   background-repeat: repeat-x;
   overflow: hidden;
@@ -117,19 +143,13 @@ header #slogan * {
 header #slogan h1 {
   font-weight: 600;
   width: 50vw;
-}
-
-header #slogan button {
-  border: 1px white;
-  background-color: #e74545;
-  height: 3em;
-  width: 120px;
+  text-transform: uppercase;
 }
 
 #features {
   margin: 70px auto;
   display: grid;
-  grid-template: 1fr 1fr /1fr 1fr 1fr;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
   text-align: center;
   grid-column-gap: 100px;
 }
@@ -157,9 +177,122 @@ header #slogan button {
   height: 18.75vw;
 }
 
-#team > div {
+#team {
+  margin: 70px auto;
+}
+
+#team #members {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 50px;
+}
+
+#team #members img {
+  width: 100%;
+}
+
+#team #members h6 {
+  color: #e84545;
+}
+
+#quotes .item {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  color: white;
+  height: 400px;
+}
+
+#quotes .item .photo {
+  background-position: 50%;
+}
+
+#quotes .item .quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#quotes .item .quote h3 {
+  font-family: "Dancing Script";
+  font-size: 3em;
+}
+
+#quotes .item .quote h3:before, #quotes .item .quote h3:after {
+  content: '"';
+}
+
+#quotes .item .quote p {
+  text-align: end;
+}
+
+#quotes .item .quote p:before {
+  content: "- ";
+}
+
+#download {
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#download p {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#contact {
+  background-color: #393d63;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+}
+
+#contact * {
+  display: grid;
+  text-align: center;
+  justify-content: space-around;
+}
+
+#contact .my-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+}
+
+#contact .my-container h3 {
+  font-size: 1.5em;
+}
+
+#contact .my-container p {
+  font-size: .8em;
+}
+
+#contact .my-container .buttons-social {
+  display: flex;
+}
+
+#contact .my-container .buttons-social button {
+  background-color: #393d63;
+}
+
+footer {
+  background-color: #313353;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer i {
+  color: #e74545;
 }
  
 

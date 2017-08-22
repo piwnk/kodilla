@@ -6,15 +6,18 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="css/style.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="script/index.js"></script>
 </head>
 
 <body>
    <header>
       <div class="mask"></div>
-      <nav class="container">
+      <nav class="my-container">
          <div id="logo">
             <h1>ACTIVE</h1>
             <h1>BOX</h1>
@@ -43,10 +46,10 @@
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur
             et.
          </p>
-         <button type="button">Find out more</button>
+         <button type="button" class="button-red">Find out more</button>
       </div>
    </header>
-   <section id="features" class="container">
+   <section id="features" class="my-container">
       <div class="feature">
          <img src="http://lorempixel.com/400/400/" alt="easily">
          <h2>Easily Customised</h2>
@@ -85,9 +88,91 @@
       </div>
    </section>
    <section id="gallery"></section>
-   <section id="team" class="container">
-         <div></div>
+   <section id="team" class="my-container">
+      <div id="members">
+         <div class="member">
+            <img src="" alt="">
+            <h4></h4>
+            <h6></h6>
+            <p></p>
+            <div class="buttons-social">
+               <a href="#" target="_blank">
+                  <button type="button"><i class="fa fa-facebook"></i></button>
+               </a>
+               <a href="#" target="_blank">
+                  <button type="button"><i class="fa fa-twitter"></i></button>
+               </a>
+               <a href="#" target="_blank">
+                  <button type="button"><i class="fa fa-linkedin-square"></i></button>
+               </a>
+            </div>
+         </div>
+      </div>
    </section>
+   <section id="quotes">
+      <div id="quoteCarousel" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#quoteCarousel" data-slide-to="0" class="active"></li>
+         </ol>
+         <div class="carousel-inner" role="listbox">
+            <div class="item active">
+               <div class="photo"></div>
+               <div class="quote">
+                  <h3 class="quote-content"></h3>
+                  <p class="author"></p>
+               </div>
+            </div>
+         </div>
+         <div class="carousel-controls">
+            <a href="#quoteCarousel" class="carousel-control left" role="button" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a href="#quoteCarousel" class="carousel-control right" role="button" data-slide="next">
+               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+         </div>
+      </div>
+   </section>
+   <section id="download" class="my-container">
+      <div>
+         <h1>Are You Ready to Start? Download Now For Free!</h1>
+         <p>Fusce dapibus, tellus ac cursus commodo</p>
+         <a href="#"><button type="button" class="button-red">Download Here</button></a>
+      </div>
+   </section>
+   <section id="contact">
+      <div class="my-container">
+         <div class="location">
+            <h3>Location</h3>
+            <p>3481 Melrose Place</p>
+            <p>Beverly Hills, CA 90210</p>
+         </div>
+         <div class="share">
+            <h3>Share with love</h3>
+            <div class="buttons-social">
+               <a href="#" target="_blank">
+                        <button type="button"><i class="fa fa-facebook"></i></button>
+                     </a>
+               <a href="#" target="_blank">
+                        <button type="button"><i class="fa fa-twitter"></i></button>
+                     </a>
+               <a href="#" target="_blank">
+                        <button type="button"><i class="fa fa-linkedin-square"></i></button>
+                     </a>
+            </div>
+         </div>
+         <div class="about">
+            <h3>About ActiveBox</h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
+         </div>
+      </div>
+      </div>
+
+   </section>
+   <footer>
+      <p>Copyright © 2017 ActiveBox. All Rights Reserved</p>
+      <p>Made with <i class="fa fa-heart"></i> by Sam Wonelse</p>
+   </footer>
 </body>
 
 </html>
