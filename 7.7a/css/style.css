@@ -70,9 +70,9 @@ header nav {
 }
 
 header nav * {
+  display: flex;
   text-align: center;
   align-items: center;
-  display: flex;
   justify-content: center;
 }
 
@@ -89,23 +89,22 @@ header nav #logo h1 {
 
 header nav #logo h1:first-child {
   font-family: "Kanit", sans-serif;
+  font-weight: 800;
   color: grey;
-  font-size: 2em;
+  font-size: 1.9em;
 }
 
 header nav #logo h1:last-child {
   font-family: "Kanit", sans-serif;
   font-weight: 100;
   color: white;
-  font-size: 1.7em;
+  font-size: 1.8em;
 }
 
 header nav #navbar {
   list-style: none;
   padding: 0;
   height: 100%;
-  margin: auto;
-  text-align: center;
   margin-right: 0;
 }
 
@@ -122,7 +121,7 @@ header nav #navbar li a {
   text-transform: uppercase;
   text-decoration: none;
   color: white;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 header #slogan {
@@ -185,6 +184,7 @@ header #slogan h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 50px;
+  justify-content: space-around;
 }
 
 #team #members img {
@@ -193,6 +193,7 @@ header #slogan h1 {
 
 #team #members h6 {
   color: #e84545;
+  text-transform: uppercase;
 }
 
 #quotes .item {
@@ -225,7 +226,7 @@ header #slogan h1 {
 }
 
 #quotes .item .quote p {
-  text-align: end;
+  align-self: flex-end;
 }
 
 #quotes .item .quote p:before {
@@ -233,7 +234,7 @@ header #slogan h1 {
 }
 
 #download {
-  height: 250px;
+  height: 300px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -265,7 +266,9 @@ header #slogan h1 {
 }
 
 #contact .my-container h3 {
-  font-size: 1.5em;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 #contact .my-container p {
@@ -274,6 +277,7 @@ header #slogan h1 {
 
 #contact .my-container .buttons-social {
   display: flex;
+  margin-bottom: 20px;
 }
 
 #contact .my-container .buttons-social button {
