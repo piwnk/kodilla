@@ -7,7 +7,7 @@
    //  font-family: "Quicksand", sans-serif;
     font-family: "Open Sans", sans-serif;
     /* margin: 0 auto; */
-    border: 1px solid coral;
+    // border: 1px solid coral;
     max-width: 1800px;
 }
 
@@ -66,7 +66,7 @@ header {
                     font-family: "Kanit", sans-serif;
                     font-weight: 100;
                     color: white;
-                    font-size: 1.9em;
+                    font-size: 1.7em;
                 }
             }
         }
@@ -118,7 +118,6 @@ header {
 }
 
 #features {
-   // margin: 70px;
    margin: 70px auto;
    display: grid;
    grid-template: 1fr 1fr /1fr 1fr 1fr;
@@ -148,3 +147,9 @@ header {
       height: (100vw *3 / 16);
    }
 }
+
+#team>div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
