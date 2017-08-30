@@ -196,7 +196,7 @@ header #slogan h1 {
   text-transform: uppercase;
 }
 
-#quotes .item {
+#quotes .item .wrp {
   display: grid;
   grid-template-columns: 2fr 3fr;
   color: white;

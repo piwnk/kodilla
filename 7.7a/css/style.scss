@@ -6,7 +6,7 @@
     box-sizing: border-box; //  font-family: "Quicksand", sans-serif;
     font-family: "Open Sans", sans-serif;
     /* margin: 0 auto; */
-   //  border: 1px solid coral;
+    //  border: 1px solid coral;
     max-width: 1800px;
 }
 
@@ -186,10 +186,12 @@ header {
 
 #quotes {
     .item {
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-        color: white;
-        height: 400px;
+        .wrp {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            color: white;
+            height: 400px;
+        }
         .photo {
             background-position: 50%;
         }
