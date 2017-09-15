@@ -10,7 +10,7 @@ const cloneDivs = () => {
    let $container = $('.container');
    let $div1 = $('.div1');
    let $div2 = $('.div2');
-   for (let i in Array.from(Array(5).keys())) {
+   for (let i=0; i<5; i+=1) {
       $container.append($div1.clone());
       $container.append($div2.clone());
    }
