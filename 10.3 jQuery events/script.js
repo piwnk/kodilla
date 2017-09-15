@@ -4,11 +4,11 @@ $(function () {
   let $carouselControls = $('#carousel').find('button');
   let $carouselIndicators = $('.btn-wrapper').find("button");
 
-  imgCount = [2, 3, 4, 0, 1];
+  const imgCount = [2, 3, 4, 0, 1];
 
   const manageList = () => {
     cloneItems();
-    setInterval(changeSlide, 4000);
+    // setInterval(changeSlide, 4000);
     addSlideControlsEventListener();
     addIndicatorsEventListener();
   };
@@ -38,7 +38,14 @@ $(function () {
     $carouselIndicators.on("mouseleave", (e) => {
       $(e.currentTarget).css("transform", "scale(1)");
     });
-    $carouselIndicators.on("click", );
+    $carouselIndicators.on("click", (e) => {
+      let img_ix = $(e.currentTarget).index();
+      let imgCountPosition = imgCount.indexOf(img_ix)
+      for (let i=0; i<imgCountPosition; i++) {
+        moveSlide("right", 500);
+      }
+      console.log();
+    });
   };
 
 
