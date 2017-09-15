@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    box-sizing: border-box; //  border: 1px solid coral;
+}
+
+body {
+    display: flex;
+    width: 2000px;
+    align-items: center;
+    height: 100vh;
+    background: black;
+}
+
+#carousel {
+    position: relative;
+    display: flex;
+    li {
+        //   height: 300px;
+        //   width: 400px;
+    }
+    .controls {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;
+        width: 100%;
+        padding: 50px;
+        z-index: 1;
+        button {
+            height: 50px;
+            width: 50px;
+            border: 1px solid white;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, .5);
+            color: white;
+            i {
+                font-size: 2em;
+            }
+        }
+    }
+    .indicators {
+      position: absolute;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       z-index: 2;
+        .btn-wrapper {
+            width: 120px;
+            display: flex;
+            justify-content: space-between;
+            // align-self: flex-end;
+            button {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: rgba(0,0,0,0);
+                border: 2px solid white;
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 4fr 8fr 4fr 1fr;
+        grid-template-columns: repeate(5, 1fr);
+        li {
+            float: left;
+            div {
+                padding: 0;
+                overflow: hidden;
+                img {
+                    height: 300px;
+                    border: 5px solid lightgrey;
+                    border-radius: 3px;
+                }
+            }
+            &:nth-child(2),
+            &:nth-child(4) {
+                transform: scale(1.3);
+                transition: ease-out .5s; //  z-index: 0;
+            }
+            &:nth-child(3) {
+                //  border: 10px solid coral;
+                transform: scale(1.8);
+                transition: ease-in .5s;
+                z-index: 1;
+            }
+            &:nth-child(1),
+            &:nth-child(5) {
+                transform: scale(1);
+                transition: ease-out .5s; //  z-index: 0;
+            }
+        }
+    }
+}

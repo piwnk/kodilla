@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 2000px;
+  align-items: center;
+  height: 100vh;
+  background: black;
+}
+
+#carousel {
+  position: relative;
+  display: flex;
+}
+
+#carousel .controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  padding: 50px;
+  z-index: 1;
+}
+
+#carousel .controls button {
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+#carousel .controls button i {
+  font-size: 2em;
+}
+
+#carousel .indicators {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+#carousel .indicators .btn-wrapper {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#carousel .indicators .btn-wrapper button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+#carousel ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr 8fr 4fr 1fr;
+  grid-template-columns: repeate(5, 1fr);
+}
+
+#carousel ul li {
+  float: left;
+}
+
+#carousel ul li div {
+  padding: 0;
+  overflow: hidden;
+}
+
+#carousel ul li div img {
+  height: 300px;
+  border: 5px solid lightgrey;
+  border-radius: 3px;
+}
+
+#carousel ul li:nth-child(2), #carousel ul li:nth-child(4) {
+  transform: scale(1.3);
+  transition: ease-out .5s;
+}
+
+#carousel ul li:nth-child(3) {
+  transform: scale(1.8);
+  transition: ease-in .5s;
+  z-index: 1;
+}
+
+#carousel ul li:nth-child(1), #carousel ul li:nth-child(5) {
+  transform: scale(1);
+  transition: ease-out .5s;
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
