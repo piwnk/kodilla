@@ -40,7 +40,7 @@ $(function () {
     });
     $carouselIndicators.on("click", (e) => {
       let img_ix = $(e.currentTarget).index();
-      let imgCountPosition = imgCount.indexOf(img_ix)
+      let imgCountPosition = imgCount.indexOf(img_ix);
       for (let i=0; i<imgCountPosition; i++) {
         moveSlide("right", 500);
       }
