@@ -1,63 +1,79 @@
 $(function () {
   console.log('hello');
-  manageList();
-});
-var $carouselList = $('#carousel').find('ul');
-const manageList = () => {
-  cloneItems();
-  //   addSlideControlsEL()
-  setInterval(changeSlide, 4000);
-  addSlideControlsEventListener();
-};
-
-const cloneItems = () => {
   let $carouselList = $('#carousel').find('ul');
-  $li_template = $carouselList.find('li');
-  for (let i = 0; i < 5; i++) {
-    $li = $li_template.clone();
-    $li.find('img').attr('src', `img/pic_${i}.jpg`);
-    $carouselList.append($li);
-  }
-  $li_template.remove();
-};
-
-const addSlideControlsEventListener = () => {
   let $carouselControls = $('#carousel').find('button');
-  $carouselControls.on('click', 'i', (el) => {
-    direction = $(el.currentTarget).attr('class').split('-').slice(-1)[0];
-    changeSlide(direction);
-  });
-};
+  let $carouselIndicators = $('.btn-wrapper').find("button");
 
-// is it better to use param or nested function or global carousel var?
+  imgCount = [2, 3, 4, 0, 1];
 
-const changeSlide = (direction) => {
+  const manageList = () => {
+    cloneItems();
+    setInterval(changeSlide, 4000);
+    addSlideControlsEventListener();
+    addIndicatorsEventListener();
+  };
 
-  let $carouselList = $('#carousel').find('ul');
-  let directionValue = (direction == "left") ? 400 : -400;
-  let $indicators = $('btn-wrapper').find("button");
-  console.log($indicators);
-  $indicators.css("background-color", 'white');
-  $indicators.css({width: 200});
-  //WHY NOT WORKING
+  const cloneItems = () => {
+    let $li_template = $carouselList.find('li');
+    for (let i = 0; i < 5; i++) {
+      let $li = $li_template.clone();
+      $li.find('img').attr('src', `img/pic_${i}.jpg`);
+      $carouselList.append($li);
+    }
+    $li_template.remove();
+  };
+
+  const addSlideControlsEventListener = () => {
+    $carouselControls.on('click', 'i', (e) => {
+      direction = $(e.currentTarget).attr('class').split('-').slice(-1)[0];
+      changeSlide(direction);
+    });
+  };
+
+  const addIndicatorsEventListener = () => {
+    console.log($carouselIndicators);
+    $carouselIndicators.on("mouseenter", (e) => {
+      $(e.currentTarget).css("transform", "scale(1.3)");
+    });
+    $carouselIndicators.on("mouseleave", (e) => {
+      $(e.currentTarget).css("transform", "scale(1)");
+    });
+    $carouselIndicators.on("click", );
+  };
 
 
-  const moveSlide = () => {
+  const changeSlide = (direction, speed=500) => {
+    const directionValue = (direction == "left") ? 400 : -400;
+
+    $carouselList.animate({
+      marginLeft: directionValue
+    }, speed, function () {
+      moveSlide(direction);
+    });
+  };
+
+  const moveSlide = (direction) => {
     let $firstItem = $carouselList.find('li:first');
     let $lastItem = $carouselList.find('li:last');
 
-    console.log(direction);
-   //  WHY INCORRECT
-   //  (direction == "left") ? $firstItem.before($lastItem) : $lastItem.after($firstItem)
+    $carouselIndicators.eq(imgCount[0]).removeClass("active"); //remove "active" class
+
     if (direction == "left") {
       $firstItem.before($lastItem);
+      imgCount.unshift(imgCount.pop());
     } else {
       $lastItem.after($firstItem);
+      imgCount.push(imgCount.shift());
     }
+    $carouselIndicators.eq(imgCount[0]).addClass("active"); //add "active" class
 
-    $carouselList.css({marginLeft: 0});
+    $carouselList.css({
+      marginLeft: 0
+    });
+
+    // const img_src = $carouselList.find('img').eq(2).attr('src');
+    // const img_ix = img_src.match(/_(\d)./)[1];
   };
-  console.log(directionValue);
 
-  $carouselList.animate({marginLeft: directionValue}, 500, moveSlide);
-};
+  manageList();
+});
