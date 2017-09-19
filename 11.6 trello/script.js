@@ -1,128 +1,103 @@
 const getUUID = () => {
-   // const uuid = require("uuid/v4");
    const uuid = uuidv4();
    console.log(uuid);
    return uuid;
 };
 
-// class Column {
-//    constructor(name) {
-//       this.id = getUUID();
-//       this.name = name;
-//       this.$element = createColumn();
-//    }
-//    createColumn() {
-//       const $column = $("<div>").addClass("column");
-//       const $columnTitle = $("<h2>").addClass("column-title").text(this.name);
-//       const $columnCardList = $("<ul>").addClass("column-card-list");
-//       const $columnDelete = $("<button>").addClass("btn-delete").text("X");
-//       const $columnAddCard = $("<button>").addClass("add-card").text("Add a card");
+class Column {
+   constructor(name) {
+      this.id = getUUID();
+      this.name = name;
+      this.$element = this.createColumn();
+   }
+   createColumn() {
+      const $column = $("<div>").addClass("column");
+      const $columnTitle = $("<h2>").addClass("column-title").text(this.name);
+      const $columnCardList = $("<ul>").addClass("column-card-list");
+      const $columnDelete = $("<button>").addClass("btn-delete").text("x");
+      // const $columnAddCard = $("<button>").addClass("add-card").text("Add a card");
+      const $columnAddCard = $("<button>").addClass("add-card").text("+");
 
-//       $columnDelete.click(() => {
-//          this.removeColumn();
-//       });
-
-//       $columnAddCard.click(() => {
-//          this.addCard(new Card(prompt("Enter the name of the card")));
-//       });
-
-//       $column.append($columnTitle)
-//          .append($columnDelete)
-//          .append($columnAddCard)
-//          .append($columnCardList)
-
-//       return $column;
-//    }
-
-//    addCard(card) {
-//       this.$element.children('ul').append(card.$element); //WHY NOT FIND?
-//    }
-
-//    removeColumn() {
-//       this.$element.remove();
-//    }
-// }
-
-function Column(name) {
-   var self = this;
-
-   this.id = getUUID();
-   this.name = name;
-   this.$element = createColumn();
-
-   function createColumn() {
-      var $column = $('<div>').addClass('column');
-      var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
-      var $columnCardList = $('<ul>').addClass('column-card-list');
-      var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-      var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
-
-      $columnDelete.click(function () {
-         self.removeColumn();
+      $columnDelete.click(() => {
+         this.removeColumn();
       });
 
-      $columnAddCard.click(function () {
-         self.addCard(new Card(prompt("Enter the name of the card")));
+      $columnAddCard.click(() => {
+         this.addCard(new Card(prompt("Enter the name of the card")));
       });
 
       $column.append($columnTitle)
-         .append($columnDelete)
+         .append($columnCardList)
          .append($columnAddCard)
-         .append($columnCardList);
+         .append($columnDelete);
+
       return $column;
+   }
+
+   addCard(card) {
+      this.$element.children('ul').append(card.$element); //WHY NOT FIND?
+   }
+
+   removeColumn() {
+      this.$element.remove();
    }
 }
 
-Column.prototype = {
-   addCard: function (card) {
-      this.$element.children('ul').append(card.$element);
-   },
-   removeColumn: function () {
-      this.$element.remove();
-   }
-};
+// function Column(name) {
+//    var self = this;
 
-// class Card {
-//    constructor(description) {
-//       this.id = getUUID();
-//       this.description = description;
-//       this.$element = createCard();
-//    }
+//    this.id = getUUID();
+//    this.name = name;
+//    this.$element = createColumn();
 
-//    createCard() {
-//       const $card = $("<li>").addClass("card");
-//       const $cardDescription = $("<p>").addClass("card-description");
-//       const $cardDelete = $("<button>").addClass("btn-delete").text("X");
+//    function createColumn() {
+//       var $column = $('<div>').addClass('column');
+//       var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
+//       var $columnCardList = $('<ul>').addClass('column-card-list');
+//       var $columnDelete = $('<button>').addClass('btn-delete').text('x');
+//       // var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
+//       var $columnAddCard = $('<button>').addClass('add-card').text('+');
 
-//       $cardDelete.click(() => {
-//          this.removeCard();
+//       $columnDelete.click(function () {
+//          self.removeColumn();
 //       });
 
-//       $card.append($cardDelete)
-//          .append($cardDescription);
+//       $columnAddCard.click(function () {
+//          self.addCard(new Card(prompt("Enter the name of the card")));
+//       });
 
-//       return $card;
-//    }
-
-//    removeCard() {
-//       this.$element.remove();
+//       $column.append($columnTitle)
+//          .append($columnCardList)
+//          .append($columnAddCard)
+//          .append($columnDelete);
+//       return $column;
 //    }
 // }
 
-function Card(description) {
-   var self = this;
+// Column.prototype = {
+//    addCard: function (card) {
+//       this.$element.children('ul').append(card.$element);
+//    },
+//    removeColumn: function () {
+//       this.$element.remove();
+//    }
+// };
 
-   this.id = getUUID();
-   this.description = description;
-   this.$element = createCard(); //
+class Card {
+   constructor(description) {
+      this.id = getUUID();
+      this.description = description;
+      this.$element = this.createCard();
+   }
 
-   function createCard() {
-      var $card = $('<li>').addClass('card');
-      var $cardDescription = $('<p>').addClass('card-description').text(self.description);
-      var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+   createCard() {
+      console.log('asdfas');
+      const $card = $("<li>").addClass("card");
+      const $cardDescription = $("<p>").addClass("card-description").text(this.description);
+      const $cardDelete = $("<button>").addClass("btn-delete").text("x");
 
-      $cardDelete.click(function () {
-         self.removeCard();
+      $cardDelete.click(() => {
+         this.removeCard();
       });
 
       $card.append($cardDelete)
@@ -131,20 +106,48 @@ function Card(description) {
       return $card;
    }
 
-   Card.prototype = {
-      removeCard: function () {
-         this.$element.remove();
-      }
-   };
+   removeCard() {
+      this.$element.remove();
+   }
 }
+
+// function Card(description) {
+//    var self = this;
+
+//    this.id = getUUID();
+//    this.description = description;
+//    this.$element = createCard(); //
+
+//    function createCard() {
+//       var $card = $('<li>').addClass('card');
+//       var $cardDescription = $('<p>').addClass('card-description').text(self.description);
+//       var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+
+//       $cardDelete.click(function () {
+//          self.removeCard();
+//       });
+
+//       $card.append($cardDelete)
+//          .append($cardDescription);
+
+//       return $card;
+//    }
+
+//    Card.prototype = {
+//       removeCard: function () {
+//          this.$element.remove();
+//       }
+//    };
+// }
 
 // const board = {
 //    name: "Kanban board",
 //    addColumn: () => {
+//       console.log(this); //WINDOW??
 //       this.$element.append(column.$element);
 //       initSortable();
 //    },
-//    $element: $("#board").find("column-container")
+//    $element: $("#board").find(".column-container")
 // };
 
 var board = {

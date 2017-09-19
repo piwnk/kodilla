@@ -1,17 +1,64 @@
- * {
-    border: 1px solid coral;
- }
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans');
+* {
+   // border: 1px solid coral;
+   font-family: "Josefin Sans";
+}
 
- .column-container {
-    display: flex;
-    .column {
-       flex-grow: 1;
-       flex-basis: 0;
+.board {
+   h1,
+   h2,
+   p {
+      text-align: center;
+   }
+}
 
+button {
+   background-color: lightyellow;
+   border: 1px solid lightgrey;
+}
+
+.column-container {
+   display: flex;
+   &>button {
+      float: right;
+   }
+   .column {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-basis: 0;
+      border: 1px solid black;
+      padding: 20px;
+      .btn-delete {
+         align-self: flex-end; //buttons to the bottom
+      }
+      h2 {
+         margin-top: 0;
+      }
       .column-card-list {
          list-style-type: none;
          margin: 0;
          padding: 0;
+         min-height: 100px;
+         li {
+            background-color: #FFFF68;
+            border: 1px solid lightblue; // padding: 10px;
+            margin-bottom: 10px;
+            // padding: 20px 0;
+            button {
+               background-color: rgba(0, 0, 0, 0);
+               border: 0;
+               float: right; // color: white;
+            }
+         }
       }
-    }
- }
+      &>button {
+         width: 100%;
+         align-self: flex-end;
+      }
+   }
+}
+
+.card-placeholder {
+   background: red;
+}

@@ -1,20 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans");
 * {
-  border: 1px solid coral;
+  font-family: "Josefin Sans";
+}
+
+.board h1,
+.board h2,
+.board p {
+  text-align: center;
+}
+
+button {
+  background-color: lightyellow;
+  border: 1px solid lightgrey;
 }
 
 .column-container {
   display: flex;
 }
 
+.column-container > button {
+  float: right;
+}
+
 .column-container .column {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-basis: 0;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.column-container .column .btn-delete {
+  align-self: flex-end;
+}
+
+.column-container .column h2 {
+  margin-top: 0;
 }
 
 .column-container .column .column-card-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  min-height: 100px;
+}
+
+.column-container .column .column-card-list li {
+  background-color: #FFFF68;
+  border: 1px solid lightblue;
+  margin-bottom: 10px;
+}
+
+.column-container .column .column-card-list li button {
+  background-color: transparent;
+  border: 0;
+  float: right;
+}
+
+.column-container .column > button {
+  width: 100%;
+  align-self: flex-end;
+}
+
+.card-placeholder {
+  background: red;
 }
  
 
