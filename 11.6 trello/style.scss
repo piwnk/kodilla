@@ -1,0 +1,17 @@
+ * {
+    border: 1px solid coral;
+ }
+
+ .column-container {
+    display: flex;
+    .column {
+       flex-grow: 1;
+       flex-basis: 0;
+
+      .column-card-list {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+    }
+ }
