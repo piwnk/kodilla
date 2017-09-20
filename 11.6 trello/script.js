@@ -143,8 +143,7 @@ class Card {
 const board = {
    name: "Kanban board",
    addColumn: (column) => {
-      console.log(this); //WINDOW??
-      // this.$element.append(column.$element);
+      console.log(this);
       board.$element.append(column.$element);
       initSortable();
    },
