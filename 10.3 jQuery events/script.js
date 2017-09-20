@@ -39,10 +39,14 @@ $(function () {
       $(e.currentTarget).css("transform", "scale(1)");
     });
     $carouselIndicators.on("click", (e) => {
-      let img_ix = $(e.currentTarget).index();
-      let imgCountPosition = imgCount.indexOf(img_ix);
+      let indicatorIndex = $(e.currentTarget).index();
+      let imgCountPosition = imgCount.indexOf(indicatorIndex);
       for (let i=0; i<imgCountPosition; i++) {
-        moveSlide("right", 500);
+        // if (indicatorIndex >= imgCountPosition) {
+          moveSlide("right", 500);
+        // } else {
+        //   moveSlide("left", 500);
+        // }
       }
       console.log();
     });

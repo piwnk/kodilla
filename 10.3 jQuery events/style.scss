@@ -6,24 +6,28 @@
 body {
    // display: flex;
    display: grid;
-   grid-template-rows: repeat(3, 1fr);
-   width: 1200px;
+   grid-template-rows: repeat(3, 1fr); // width: 1200px;
+   width: 100vw;
+   justify-content: center;
    align-items: center;
    height: 100vh;
    background: black;
 }
 
 #carousel {
-   position: relative; // display: flex;
+   position: relative;
+   display: flex;
    grid-row: 2;
+   justify-content: center;
    .controls {
       position: absolute;
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 50px;
-      z-index: 1;
+      height: 100%;
+      padding: 0 10px;
+      z-index: 3;
       button {
          height: 50px;
          width: 50px;
@@ -64,9 +68,18 @@ body {
       list-style: none;
       padding: 0;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template: 1fr / repeat(3, 1fr);
+      // display: flex;
+      justify-content: center;
+      // overflow: hidden;
+      @media (max-width: 1024px) {
+         // grid-template: repeat(3, 1fr) / 1fr;
+      }
       li {
          float: left;
+         @media (max-width: 1024px) {
+            width: 100%;
+         }
          div {
             padding: 0;
             overflow: hidden;
@@ -80,6 +93,9 @@ body {
          &:nth-child(4) {
             transform: scale(1);
             transition: ease-in-out .5s; //  z-index: 0;
+            @media (max-width: 1024px) {
+               display: none;
+            }
          }
          &:nth-child(3) {
             transform: scale(1.8);
