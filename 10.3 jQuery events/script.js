@@ -25,7 +25,7 @@ $(function () {
 
   const addSlideControlsEventListener = () => {
     $carouselControls.on('click', 'i', (e) => {
-      direction = $(e.currentTarget).attr('class').split('-').slice(-1)[0];
+      let direction = $(e.currentTarget).attr('class').split('-').slice(-1)[0];
       changeSlide(direction);
     });
   };
