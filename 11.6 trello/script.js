@@ -140,24 +140,25 @@ class Card {
 //    };
 // }
 
-// const board = {
-//    name: "Kanban board",
-//    addColumn: () => {
-//       console.log(this); //WINDOW??
+const board = {
+   name: "Kanban board",
+   addColumn: (column) => {
+      console.log(this); //WINDOW??
+      // this.$element.append(column.$element);
+      board.$element.append(column.$element);
+      initSortable();
+   },
+   $element: $("#board").find(".column-container")
+};
+
+// var board = {
+//    name: 'Kanban Board',
+//    addColumn: function (column) {
 //       this.$element.append(column.$element);
 //       initSortable();
 //    },
-//    $element: $("#board").find(".column-container")
+//    $element: $('#board .column-container')
 // };
-
-var board = {
-   name: 'Kanban Board',
-   addColumn: function (column) {
-      this.$element.append(column.$element);
-      initSortable();
-   },
-   $element: $('#board .column-container')
-};
 
 function initSortable() {
    $('.column-card-list').sortable({
