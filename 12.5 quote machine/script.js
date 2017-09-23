@@ -6,7 +6,8 @@ $(function () {
    // const quoteUrl = "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=parseQuote";
 
 
-   function getQuote() {
+   // function getQuote() {
+   const getQuote = () => {
       // $.getJSON(quoteUrl, createTweet);
    
       $.ajax({
@@ -16,14 +17,13 @@ $(function () {
       });
    }
 
-   function createTweet(input) {
+
+   // function createTweet(input) {
+   const createTweet = (input) => {
       let data = input[0];
-      console.log(data);
 
       let quoteText = $(data.content).text().trim();
-      // let quoteText = data.quoteText;
       let quoteAuthor = data.title;
-      // let quoteAuthor = data.quoteAuthor;
 
       if (!quoteAuthor.length) {
          quoteAuthor = "Unknown";
@@ -36,7 +36,6 @@ $(function () {
          getQuote();
       } else {
          console.log(tweetText.length);
-
          let tweet = tweetLink + encodeURIComponent(tweetText);
          $('.quote').text(quoteText);
          $('.author').text("Author: " + quoteAuthor);
