@@ -1,14 +1,13 @@
 $(function () {
-  console.log('hello');
   let $carouselList = $('#carousel').find('ul');
   let $carouselControls = $('#carousel').find('button');
-  let $carouselIndicators = $('.btn-wrapper').find("button");
+  let $carouselIndicators = $('.btn-wrapper').find('button');
 
   const imgCount = [2, 3, 4, 0, 1];
 
   const manageList = () => {
     cloneItems();
-    // setInterval(changeSlide, 4000);
+    // setInterval(changeSlide, 4000)
     addSlideControlsEventListener();
     addIndicatorsEventListener();
   };
@@ -31,30 +30,31 @@ $(function () {
   };
 
   const addIndicatorsEventListener = () => {
-    console.log($carouselIndicators);
-    $carouselIndicators.on("mouseenter", (e) => {
-      $(e.currentTarget).css("transform", "scale(1.3)");
+    // console.log($carouselIndicators);
+    $carouselIndicators.on('mouseenter', (e) => {
+      console.log('asdf');
+      $(e.currentTarget).css('transform', 'scale(1.3)');
     });
-    $carouselIndicators.on("mouseleave", (e) => {
-      $(e.currentTarget).css("transform", "scale(1)");
+    $carouselIndicators.on('mouseleave', (e) => {
+      $(e.currentTarget).css('transform', 'scale(1)');
     });
-    $carouselIndicators.on("click", (e) => {
+    $carouselIndicators.on('click', (e) => {
+      console.log(e.currentTarget);
       let indicatorIndex = $(e.currentTarget).index();
       let imgCountPosition = imgCount.indexOf(indicatorIndex);
-      for (let i=0; i<imgCountPosition; i++) {
+      for (let i = 0; i < imgCountPosition; i++) {
         // if (indicatorIndex >= imgCountPosition) {
-          moveSlide("right", 500);
-        // } else {
-        //   moveSlide("left", 500);
-        // }
+        moveSlide('right', 500);
+      // } else {
+      //   moveSlide("left", 500)
+      // }
       }
       console.log();
     });
   };
 
-
-  const changeSlide = (direction, speed=500) => {
-    const directionValue = (direction == "left") ? 400 : -400;
+  const changeSlide = (direction, speed = 500) => {
+    const directionValue = (direction == 'left') ? 400 : -400;
 
     $carouselList.animate({
       marginLeft: directionValue
@@ -67,23 +67,23 @@ $(function () {
     let $firstItem = $carouselList.find('li:first');
     let $lastItem = $carouselList.find('li:last');
 
-    $carouselIndicators.eq(imgCount[0]).removeClass("active"); //remove "active" class
+    $carouselIndicators.eq(imgCount[0]).removeClass('active'); // remove "active" class
 
-    if (direction == "left") {
+    if (direction == 'left') {
       $firstItem.before($lastItem);
       imgCount.unshift(imgCount.pop());
     } else {
       $lastItem.after($firstItem);
       imgCount.push(imgCount.shift());
     }
-    $carouselIndicators.eq(imgCount[0]).addClass("active"); //add "active" class
+    $carouselIndicators.eq(imgCount[0]).addClass('active'); // add "active" class
 
     $carouselList.css({
       marginLeft: 0
     });
 
-    // const img_src = $carouselList.find('img').eq(2).attr('src');
-    // const img_ix = img_src.match(/_(\d)./)[1];
+  // const img_src = $carouselList.find('img').eq(2).attr('src')
+  // const img_ix = img_src.match(/_(\d)./)[1]
   };
 
   manageList();
