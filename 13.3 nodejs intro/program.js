@@ -1,3 +1,5 @@
+var os = require('os');
+
 process.stdin.setEncoding('utf-8');
 
 process.stdin.on('readable', function () {
@@ -38,6 +40,8 @@ process.stdin.on('readable', function () {
       case '/exit':
         process.stdout.write('Quiting app!\n');
         process.exit();
+      default:
+         process.stderr.write("Wrong instruction!\n");
     }
   }
 });
