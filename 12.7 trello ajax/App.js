@@ -28,7 +28,7 @@
 
 var prefix = "https://cors-anywhere.herokuapp.com/";
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
-// baseUrl = prefix + baseUrl;
+baseUrl = prefix + baseUrl;
 
 var myHeaders = {
    'X-Client-Id': 2309,
