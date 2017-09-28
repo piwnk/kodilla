@@ -30,16 +30,13 @@ $(function () {
   };
 
   const addIndicatorsEventListener = () => {
-    // console.log($carouselIndicators);
     $carouselIndicators.on('mouseenter', (e) => {
-      console.log('asdf');
       $(e.currentTarget).css('transform', 'scale(1.3)');
     });
     $carouselIndicators.on('mouseleave', (e) => {
       $(e.currentTarget).css('transform', 'scale(1)');
     });
     $carouselIndicators.on('click', (e) => {
-      console.log(e.currentTarget);
       let indicatorIndex = $(e.currentTarget).index();
       let imgCountPosition = imgCount.indexOf(indicatorIndex);
       for (let i = 0; i < imgCountPosition; i++) {
