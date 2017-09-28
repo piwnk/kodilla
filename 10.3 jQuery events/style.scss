@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid coral;
+}
+
+#carousel {
+   //  display: flex;
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        div {
+            overflow: hidden;
+            height: 300px;// WHYYYYY??
+        }
+    }
+}

@@ -11,7 +11,7 @@ button.addEventListener("click", function () {
    counter = lastEntry.innerText.split(' ').slice(-1)[0];
 
    item = document.createElement('li');
-   item.innerText = "item " + ++counter;
+   item.innerText = "item " + counter++;
    
    list.appendChild(item);
-})
+});
