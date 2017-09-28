@@ -18,7 +18,8 @@ process.stdin.on('readable', function () {
         process.stdout.write(process.version + '\n');
         break;
       case '/cpuUsage':
-        process.stdout.write(process.cpuUsage.toString().trim());
+        // process.stdout.write(process.cpuUsage.toString().trim());
+        process.stdout.write(JSON.stringify(process.cpuUsage()));
         process.stdout.write('\n');
         break;
       case '/env':
