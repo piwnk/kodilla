@@ -2,35 +2,38 @@
 <html lang="en">
 
 <head>
-    <title>jQuery events</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="script.js"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>jQuery Carousel</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="script.js"></script>
 </head>
 
 <body>
-    <div id="carousel">
-        <ul>
-            <li>
-                <div><img src="" alt=""></div>
-            </li>
-            <li>
-                <div><img src="" alt=""></div>
-            </li>
-            <li>
-                <div><img src="" alt=""></div>
-            </li>
-            <li>
-                <div><img src="" alt=""></div>
-            </li>
-            <li>
-                <div><img src="" alt=""></div>
-            </li>
-        </ul>
-    </div>
+   <div id="carousel">
+      <div class="controls">
+         <button><i class="fa fa-angle-double-left"></i></button>
+         <button><i class="fa fa-angle-double-right"></i></button>
+      </div>
+      <div class="indicators">
+         <div class="btn-wrapper">
+            <button></button>
+            <button></button>
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+         </div>
+      </div>
+      <ul>
+         <li>
+            <div><img src="" alt=""></div>
+         </li>
+      </ul>
+   </div>
+
 </body>
 
 </html>
