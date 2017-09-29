@@ -1,0 +1,25 @@
+{
+  "name": "kodilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "flag-icon-css": "^2.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piwnk/kodilla.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piwnk/kodilla/issues"
+  },
+  "homepage": "https://github.com/piwnk/kodilla#readme",
+  "devDependencies": {
+    "flag-icon-css": "^2.8.0"
+  }
+}

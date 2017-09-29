@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:500");
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#country-name.error {
+  border: 2px solid red;
+}
+
+#countries {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid black;
+}
+
+#countries li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid black;
+  width: 600px;
+  justify-content: center;
+}
+
+#countries li:last-child {
+  border: 0;
+}
+
+#countries li div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#countries li div:first-child .flag-icon {
+  border: 1px solid black;
+  width: 120px;
+  height: 90px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
